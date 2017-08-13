@@ -22,7 +22,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         admin.agregarPelicula("Spider-Man", "", "156 Min", 2, "Peliculas/spiderman.jpg");
         Pelicula pelicula=admin.getPeliculas().get(0);
         //imagen1.setIcon(pelicula.getPhoto());
-        imagen1.setIcon(new ImageIcon("Peliculas/spiderman.jpg"));
+        imagen1.setIcon(new ImageIcon("../Peliculas/spiderman.jpg"));
     }
 
     /**
