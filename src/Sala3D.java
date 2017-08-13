@@ -8,13 +8,14 @@
  *
  * @author luis
  */
-public class Main {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+public class Sala3D extends Sala{
+    
+    
+    
+    
+    public Sala3D() {
+        this.setPrecio(3600.0);
+        
     }
     
 }
