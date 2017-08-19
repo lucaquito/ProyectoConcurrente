@@ -15,6 +15,8 @@ public class HorarioyTiquetes extends javax.swing.JFrame {
      */
     public HorarioyTiquetes() {
         initComponents();
+        this.setSize(603, 412);
+        this.setResizable(false);
     }
 
     /**
@@ -104,7 +106,7 @@ public class HorarioyTiquetes extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(496, 367, 77, 23);
+        jButton5.setBounds(470, 350, 100, 23);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Asientos-Cine-Rojos.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -115,7 +117,8 @@ public class HorarioyTiquetes extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
+        TipoSala tiposala = new TipoSala();
+        tiposala.setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     /**

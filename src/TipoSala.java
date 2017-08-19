@@ -15,6 +15,8 @@ public class TipoSala extends javax.swing.JFrame {
      */
     public TipoSala() {
         initComponents();
+        this.setSize(640, 473);
+        this.setResizable(false);
     }
 
     /**
@@ -78,6 +80,11 @@ public class TipoSala extends javax.swing.JFrame {
         jButton1.setBounds(540, 220, 70, 40);
 
         jButton4.setText("Siguiente");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton4);
         jButton4.setBounds(530, 20, 80, 23);
 
@@ -97,6 +104,11 @@ public class TipoSala extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        Asientos asientos= new Asientos();
+        asientos.setVisible(true);
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments

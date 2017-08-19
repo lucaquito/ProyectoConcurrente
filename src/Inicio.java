@@ -8,15 +8,15 @@
  *
  * @author luis
  */
-public class Asientos extends javax.swing.JFrame {
+public class Inicio extends javax.swing.JFrame {
 
     /**
-     * Creates new form Asientos
+     * Creates new form Inicio
      */
-    public Asientos() {
+    public Inicio() {
         initComponents();
-        this.setSize(633, 430);
         this.setResizable(false);
+        
     }
 
     /**
@@ -30,33 +30,53 @@ public class Asientos extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
         getContentPane().setLayout(null);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PANTALLA.jpg"))); // NOI18N
+        jLabel1.setText("Nombre:");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(70, 70, 490, 290);
+        jLabel1.setBounds(20, 40, 50, 14);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Selecciona la butaca");
+        jLabel2.setText("Puerto:");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(200, 20, 230, 29);
+        jLabel2.setBounds(20, 80, 50, 14);
 
-        jButton1.setText("Siguiente");
+        jTextField1.setText("localhost");
+        getContentPane().add(jTextField1);
+        jTextField1.setBounds(100, 40, 128, 20);
+
+        jTextField3.setText("4445");
+        getContentPane().add(jTextField3);
+        jTextField3.setBounds(100, 80, 128, 20);
+
+        jButton1.setText("Conectar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1);
-        jButton1.setBounds(513, 370, 90, 23);
+        jButton1.setBounds(160, 110, 77, 23);
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/redcurtain.jpg"))); // NOI18N
-        jLabel4.setText("jLabel4");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(0, 0, 630, 410);
+        jLabel3.setText("Cinema 4000");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(90, 10, 70, 14);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+       VentanaPrincipal ventanaprincipal = new VentanaPrincipal();
+       ventanaprincipal.setVisible(true);
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -75,20 +95,20 @@ public class Asientos extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Asientos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Asientos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Asientos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Asientos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Asientos().setVisible(true);
+                new Inicio().setVisible(true);
             }
         });
     }
@@ -97,6 +117,8 @@ public class Asientos extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField3;
     // End of variables declaration//GEN-END:variables
 }

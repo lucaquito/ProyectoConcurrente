@@ -6,7 +6,6 @@ import javax.swing.ImageIcon;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author luis
@@ -18,11 +17,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
      */
     public VentanaPrincipal() {
         initComponents();
-        Admin admin= new Admin();
+        Admin admin = new Admin();
         admin.agregarPelicula("Spider-Man", "", "156 Min", 2, "Peliculas/spiderman.jpg");
-        Pelicula pelicula=admin.getPeliculas().get(0);
+        Pelicula pelicula = admin.getPeliculas().get(0);
         //imagen1.setIcon(pelicula.getPhoto());
         imagen1.setIcon(new ImageIcon("../Peliculas/spiderman.jpg"));
+        this.setSize(732, 468);
+        this.setResizable(false);
     }
 
     /**
@@ -85,7 +86,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(50, 180, 140, 23);
+        jButton1.setBounds(40, 180, 160, 23);
 
         jButton2.setText("Cars 3");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -97,35 +98,77 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jButton2.setBounds(310, 180, 120, 23);
 
         jButton3.setText("Mi villano favorito 3");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton3);
         jButton3.setBounds(550, 180, 130, 23);
 
         jButton4.setText("Emoji");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton4);
         jButton4.setBounds(50, 400, 140, 23);
 
         jButton5.setText("Spiderman Home Coming");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton5);
-        jButton5.setBounds(300, 400, 150, 23);
+        jButton5.setBounds(280, 400, 190, 23);
 
         jButton6.setText("Annabelle 2");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton6);
         jButton6.setBounds(550, 400, 130, 23);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sala4.jpg"))); // NOI18N
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, 0, 730, 470);
+        jLabel2.setBounds(0, 0, 750, 470);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        HorarioyTiquetes horarioytiquetes = new HorarioyTiquetes();
+        horarioytiquetes.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        HorarioyTiquetes horarioytiquetes = new HorarioyTiquetes();
+        horarioytiquetes.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        HorarioyTiquetes horarioytiquetes = new HorarioyTiquetes();
+        horarioytiquetes.setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        HorarioyTiquetes horarioytiquetes = new HorarioyTiquetes();
+        horarioytiquetes.setVisible(true);
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        HorarioyTiquetes horarioytiquetes = new HorarioyTiquetes();
+        horarioytiquetes.setVisible(true);
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        HorarioyTiquetes horarioytiquetes = new HorarioyTiquetes();
+        horarioytiquetes.setVisible(true);
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments
