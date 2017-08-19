@@ -15,6 +15,8 @@ public class VentanaFactura extends javax.swing.JFrame {
      */
     public VentanaFactura() {
         initComponents();
+        this.setSize(721, 460);
+        this.setResizable(false);
     }
 
     /**
@@ -26,6 +28,7 @@ public class VentanaFactura extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel11 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -36,31 +39,40 @@ public class VentanaFactura extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel11.setText("978967569467458");
+        getContentPane().add(jLabel11);
+        jLabel11.setBounds(570, 300, 110, 20);
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel1.setText("Pelicula");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(200, 140, 35, 14);
+        jLabel1.setBounds(200, 140, 70, 17);
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setText("Horario");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(200, 190, 35, 14);
+        jLabel2.setBounds(200, 190, 70, 17);
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setText("Cantidad de entradas");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(200, 220, 104, 14);
+        jLabel3.setBounds(200, 220, 150, 17);
 
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel4.setText("Tipo de sala");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(200, 254, 57, 30);
+        jLabel4.setBounds(200, 254, 100, 30);
 
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel5.setText("Numero de butaca");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(200, 300, 88, 14);
+        jLabel5.setBounds(200, 300, 140, 17);
 
         jLabel6.setText("jLabel6");
         getContentPane().add(jLabel6);
@@ -82,16 +94,11 @@ public class VentanaFactura extends javax.swing.JFrame {
         getContentPane().add(jLabel10);
         jLabel10.setBounds(380, 300, 86, 14);
 
-        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("Cinema 4000");
-        getContentPane().add(jLabel11);
-        jLabel11.setBounds(50, 30, 220, 30);
-
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Peliculas/Otras/f37a47cc-4db4-4c65-917c-6e9fed0cfd22.jpg"))); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Peliculas/Otras/82a3255f-dc5a-4dd6-8ea1-eb4380ffa54f.jpg"))); // NOI18N
         jLabel12.setText("jLabel12");
         getContentPane().add(jLabel12);
-        jLabel12.setBounds(2, 0, 718, 451);
+        jLabel12.setBounds(0, -10, 718, 451);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

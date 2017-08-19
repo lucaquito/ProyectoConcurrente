@@ -1,5 +1,9 @@
 
+import java.util.List;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -12,18 +16,67 @@ import javax.swing.ImageIcon;
  */
 public class VentanaPrincipal extends javax.swing.JFrame {
 
+    private Admin admin;
+
     /**
      * Creates new form VentanaPrincipal
      */
-    public VentanaPrincipal() {
+    public VentanaPrincipal(Admin admin) {
         initComponents();
-        Admin admin = new Admin();
-        admin.agregarPelicula("Spider-Man", "", "156 Min", 2, "Peliculas/spiderman.jpg");
-        Pelicula pelicula = admin.getPeliculas().get(0);
-        //imagen1.setIcon(pelicula.getPhoto());
-        imagen1.setIcon(new ImageIcon("../Peliculas/spiderman.jpg"));
+        this.admin = admin;
+        
+        
         this.setSize(732, 468);
         this.setResizable(false);
+        //JOptionPane.showMessageDialog(this, pelicula.getNombre());
+        generarPeliculas();
+    }
+
+    public void generarPeliculas() {
+        List listapeliculas = admin.getPeliculas();
+        int tamano = listapeliculas.size();
+        for (int i = 0; i < tamano; i++) {
+            
+            Pelicula peli= (Pelicula) listapeliculas.get(i);
+            switch (i){
+                case 0:
+                    JButton button =   pelicula1;
+                    button.setText(peli.getNombre());
+                    JLabel label = imagen1;
+                    imagen1.setIcon(peli.getPhoto());
+                    break;
+                case 1:
+                    JButton button2 =   pelicula2;
+                    button2.setText(peli.getNombre());
+                    JLabel label2 = imagen2;
+                    imagen2.setIcon(peli.getPhoto());
+                    break;
+                case 2:
+                    JButton button3 =   pelicula3;
+                    button3.setText(peli.getNombre());
+                    JLabel label3 = imagen3;
+                    imagen3.setIcon(peli.getPhoto());
+                    break;
+                case 3:
+                    JButton button4 =   pelicula4;
+                    button4.setText(peli.getNombre());
+                    JLabel label4 = imagen4;
+                    imagen3.setIcon(peli.getPhoto()); 
+                    break;
+                case 4:
+                    JButton button5 =   pelicula5;
+                    button5.setText(peli.getNombre());
+                    JLabel label5 = imagen5;
+                    imagen5.setIcon(peli.getPhoto());
+                    break;
+                case 5:
+                    JButton button6 =   pelicula6;
+                    button6.setText(peli.getNombre());
+                    JLabel label6 = imagen6;
+                    imagen6.setIcon(peli.getPhoto());
+                    break;
+            }
+        }
     }
 
     /**
@@ -36,102 +89,93 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         imagen1 = new javax.swing.JLabel();
+        imagen2 = new javax.swing.JLabel();
         imagen3 = new javax.swing.JLabel();
+        imagen4 = new javax.swing.JLabel();
         imagen5 = new javax.swing.JLabel();
-        nombre1 = new javax.swing.JLabel();
-        nombre3 = new javax.swing.JLabel();
-        nombre5 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        imagen6 = new javax.swing.JLabel();
+        pelicula1 = new javax.swing.JButton();
+        pelicula2 = new javax.swing.JButton();
+        pelicula3 = new javax.swing.JButton();
+        pelicula4 = new javax.swing.JButton();
+        pelicula5 = new javax.swing.JButton();
+        pelicula6 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
-
-        imagen1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Peliculas/Dawn-Planet-of-the-Apes-Poster-Large-128x128.jpg"))); // NOI18N
         getContentPane().add(imagen1);
         imagen1.setBounds(50, 40, 130, 130);
-
-        imagen3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Peliculas/cars-3-film.jpg"))); // NOI18N
+        getContentPane().add(imagen2);
+        imagen2.setBounds(300, 30, 130, 0);
         getContentPane().add(imagen3);
-        imagen3.setBounds(300, 30, 130, 128);
+        imagen3.setBounds(550, 40, 0, 0);
 
-        imagen5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Peliculas/despicable-me-3-war-planet-apes-14.jpeg"))); // NOI18N
+        imagen4.setText("jLabel8");
+        getContentPane().add(imagen4);
+        imagen4.setBounds(50, 260, 130, 130);
+
+        imagen5.setText("jLabel10");
         getContentPane().add(imagen5);
-        imagen5.setBounds(550, 40, 128, 128);
+        imagen5.setBounds(310, 260, 130, 130);
 
-        nombre1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Peliculas/emoji-movie-spiderman-homecoming-99.jpeg"))); // NOI18N
-        nombre1.setText("jLabel8");
-        getContentPane().add(nombre1);
-        nombre1.setBounds(50, 260, 130, 130);
+        imagen6.setText("jLabel12");
+        getContentPane().add(imagen6);
+        imagen6.setBounds(550, 260, 130, 14);
 
-        nombre3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Peliculas/spider-man_homecoming_recensione-128x128.png"))); // NOI18N
-        nombre3.setText("jLabel10");
-        getContentPane().add(nombre3);
-        nombre3.setBounds(310, 260, 130, 130);
-
-        nombre5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Peliculas/figure-016311.jpg"))); // NOI18N
-        nombre5.setText("jLabel12");
-        getContentPane().add(nombre5);
-        nombre5.setBounds(550, 260, 130, 128);
-
-        jButton1.setText("Planeta de los Simios");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        pelicula1.setText("Planeta de los Simios");
+        pelicula1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                pelicula1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(40, 180, 160, 23);
+        getContentPane().add(pelicula1);
+        pelicula1.setBounds(40, 180, 160, 23);
 
-        jButton2.setText("Cars 3");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        pelicula2.setText("Cars 3");
+        pelicula2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                pelicula2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2);
-        jButton2.setBounds(310, 180, 120, 23);
+        getContentPane().add(pelicula2);
+        pelicula2.setBounds(290, 180, 160, 23);
 
-        jButton3.setText("Mi villano favorito 3");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        pelicula3.setText("Mi villano favorito 3");
+        pelicula3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                pelicula3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3);
-        jButton3.setBounds(550, 180, 130, 23);
+        getContentPane().add(pelicula3);
+        pelicula3.setBounds(540, 180, 140, 23);
 
-        jButton4.setText("Emoji");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        pelicula4.setText("Emoji");
+        pelicula4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                pelicula4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4);
-        jButton4.setBounds(50, 400, 140, 23);
+        getContentPane().add(pelicula4);
+        pelicula4.setBounds(40, 400, 170, 23);
 
-        jButton5.setText("Spiderman Home Coming");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        pelicula5.setText("Spiderman Home Coming");
+        pelicula5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                pelicula5ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton5);
-        jButton5.setBounds(280, 400, 190, 23);
+        getContentPane().add(pelicula5);
+        pelicula5.setBounds(280, 400, 190, 23);
 
-        jButton6.setText("Annabelle 2");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        pelicula6.setText("Annabelle 2");
+        pelicula6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                pelicula6ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton6);
-        jButton6.setBounds(550, 400, 130, 23);
+        getContentPane().add(pelicula6);
+        pelicula6.setBounds(530, 400, 160, 23);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sala4.jpg"))); // NOI18N
         getContentPane().add(jLabel2);
@@ -140,35 +184,35 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void pelicula2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pelicula2ActionPerformed
         HorarioyTiquetes horarioytiquetes = new HorarioyTiquetes();
         horarioytiquetes.setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_pelicula2ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void pelicula1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pelicula1ActionPerformed
         HorarioyTiquetes horarioytiquetes = new HorarioyTiquetes();
         horarioytiquetes.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_pelicula1ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void pelicula3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pelicula3ActionPerformed
         HorarioyTiquetes horarioytiquetes = new HorarioyTiquetes();
         horarioytiquetes.setVisible(true);
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_pelicula3ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void pelicula4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pelicula4ActionPerformed
         HorarioyTiquetes horarioytiquetes = new HorarioyTiquetes();
         horarioytiquetes.setVisible(true);
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_pelicula4ActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void pelicula5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pelicula5ActionPerformed
         HorarioyTiquetes horarioytiquetes = new HorarioyTiquetes();
         horarioytiquetes.setVisible(true);
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_pelicula5ActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void pelicula6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pelicula6ActionPerformed
         HorarioyTiquetes horarioytiquetes = new HorarioyTiquetes();
         horarioytiquetes.setVisible(true);
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_pelicula6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -198,26 +242,21 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new VentanaPrincipal().setVisible(true);
-            }
-        });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel imagen1;
+    private javax.swing.JLabel imagen2;
     private javax.swing.JLabel imagen3;
+    private javax.swing.JLabel imagen4;
     private javax.swing.JLabel imagen5;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
+    private javax.swing.JLabel imagen6;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel nombre1;
-    private javax.swing.JLabel nombre3;
-    private javax.swing.JLabel nombre5;
+    private javax.swing.JButton pelicula1;
+    private javax.swing.JButton pelicula2;
+    private javax.swing.JButton pelicula3;
+    private javax.swing.JButton pelicula4;
+    private javax.swing.JButton pelicula5;
+    private javax.swing.JButton pelicula6;
     // End of variables declaration//GEN-END:variables
 }

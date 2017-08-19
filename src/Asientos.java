@@ -47,6 +47,11 @@ public class Asientos extends javax.swing.JFrame {
         jLabel2.setBounds(200, 20, 230, 29);
 
         jButton1.setText("Siguiente");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1);
         jButton1.setBounds(513, 370, 90, 23);
 
@@ -57,6 +62,11 @@ public class Asientos extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        VentanaFactura ventanafactura= new VentanaFactura();
+        ventanafactura.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

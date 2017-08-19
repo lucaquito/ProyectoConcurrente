@@ -55,7 +55,7 @@ public class Admin {
                 break;
         }
         pelicula = new Pelicula(nombre,sinopsis,duracion,censura2);
-        pelicula.setPhoto(new ImageIcon(photo));
+        pelicula.setPhoto(new ImageIcon(getClass().getResource(photo)));
         
         peliculas.add(pelicula);
         

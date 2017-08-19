@@ -9,13 +9,22 @@
  * @author luis
  */
 public class Inicio extends javax.swing.JFrame {
+    private Admin admin;
 
     /**
      * Creates new form Inicio
      */
     public Inicio() {
         initComponents();
+        this.setSize(255, 180);
         this.setResizable(false);
+        this.admin = new Admin();
+        admin.agregarPelicula("Spider-Man", "", "156 Min", 2, "Peliculas/spider-man.png");
+        admin.agregarPelicula("Planeta de los Simios", "", "166 Min", 2, "Peliculas/simios.jpeg");
+        admin.agregarPelicula("Anabelle 2", "", "146 Min", 3, "Peliculas/ana.jpg");
+        admin.agregarPelicula("Cars 3", "", "176 Min", 1, "Peliculas/cars-3.jpg");
+        admin.agregarPelicula("Emoji", "", "136 Min", 1, "Peliculas/emoji.jpeg");
+        admin.agregarPelicula("Mi vilano Favorito 3", "", "126 Min", 1, "Peliculas/mi.jpg");
         
     }
 
@@ -62,7 +71,7 @@ public class Inicio extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(160, 110, 77, 23);
+        jButton1.setBounds(160, 110, 90, 23);
 
         jLabel3.setText("Cinema 4000");
         getContentPane().add(jLabel3);
@@ -73,7 +82,7 @@ public class Inicio extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-       VentanaPrincipal ventanaprincipal = new VentanaPrincipal();
+       VentanaPrincipal ventanaprincipal = new VentanaPrincipal(admin);
        ventanaprincipal.setVisible(true);
         
     }//GEN-LAST:event_jButton1ActionPerformed
