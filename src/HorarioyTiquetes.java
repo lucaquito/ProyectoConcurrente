@@ -1,9 +1,11 @@
+
+import javax.swing.SpinnerNumberModel;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author luis
@@ -15,6 +17,12 @@ public class HorarioyTiquetes extends javax.swing.JFrame {
      */
     public HorarioyTiquetes() {
         initComponents();
+        ((SpinnerNumberModel) jSpinner1.getModel()).setMinimum(0);
+        ((SpinnerNumberModel) jSpinner2.getModel()).setMinimum(0);
+        ((SpinnerNumberModel) jSpinner3.getModel()).setMinimum(0);
+        ((SpinnerNumberModel) jSpinner1.getModel()).setMaximum(10);
+        ((SpinnerNumberModel) jSpinner2.getModel()).setMaximum(10);
+        ((SpinnerNumberModel) jSpinner3.getModel()).setMaximum(10);
         this.setSize(603, 412);
         this.setResizable(false);
     }
@@ -75,7 +83,7 @@ public class HorarioyTiquetes extends javax.swing.JFrame {
         getContentPane().add(jLabel2);
         jLabel2.setBounds(309, 73, 160, 19);
         getContentPane().add(jSpinner1);
-        jSpinner1.setBounds(470, 130, 29, 20);
+        jSpinner1.setBounds(470, 130, 50, 30);
 
         jLabel4.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -89,7 +97,7 @@ public class HorarioyTiquetes extends javax.swing.JFrame {
         getContentPane().add(jLabel6);
         jLabel6.setBounds(290, 200, 40, 19);
         getContentPane().add(jSpinner2);
-        jSpinner2.setBounds(470, 200, 29, 20);
+        jSpinner2.setBounds(470, 200, 50, 30);
 
         jLabel7.setFont(new java.awt.Font("Adobe Caslon Pro", 0, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
@@ -97,7 +105,7 @@ public class HorarioyTiquetes extends javax.swing.JFrame {
         getContentPane().add(jLabel7);
         jLabel7.setBounds(280, 270, 160, 19);
         getContentPane().add(jSpinner3);
-        jSpinner3.setBounds(470, 270, 29, 20);
+        jSpinner3.setBounds(470, 270, 50, 30);
 
         jButton5.setText("Siguiente");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -118,6 +126,7 @@ public class HorarioyTiquetes extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         TipoSala tiposala = new TipoSala();
+        this.setVisible(false);
         tiposala.setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 

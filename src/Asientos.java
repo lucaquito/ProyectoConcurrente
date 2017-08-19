@@ -65,6 +65,7 @@ public class Asientos extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         VentanaFactura ventanafactura= new VentanaFactura();
+        this.setVisible(false);
         ventanafactura.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 

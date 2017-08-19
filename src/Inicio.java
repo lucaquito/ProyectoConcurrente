@@ -83,6 +83,7 @@ public class Inicio extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
        VentanaPrincipal ventanaprincipal = new VentanaPrincipal(admin);
+       this.setVisible(false);
        ventanaprincipal.setVisible(true);
         
     }//GEN-LAST:event_jButton1ActionPerformed

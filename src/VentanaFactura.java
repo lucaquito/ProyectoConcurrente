@@ -28,6 +28,7 @@ public class VentanaFactura extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -38,11 +39,15 @@ public class VentanaFactura extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
+
+        jButton1.setText("Salir");
+        getContentPane().add(jButton1);
+        jButton1.setBounds(630, 30, 53, 23);
 
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel11.setText("978967569467458");
@@ -90,15 +95,15 @@ public class VentanaFactura extends javax.swing.JFrame {
         getContentPane().add(jLabel9);
         jLabel9.setBounds(380, 260, 86, 14);
 
-        jLabel10.setText("jLabel10");
-        getContentPane().add(jLabel10);
-        jLabel10.setBounds(380, 300, 86, 14);
-
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Peliculas/Otras/82a3255f-dc5a-4dd6-8ea1-eb4380ffa54f.jpg"))); // NOI18N
         jLabel12.setText("jLabel12");
         getContentPane().add(jLabel12);
         jLabel12.setBounds(0, -10, 718, 451);
+
+        jLabel10.setText("jLabel10");
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(380, 300, 86, 14);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -139,6 +144,7 @@ public class VentanaFactura extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
