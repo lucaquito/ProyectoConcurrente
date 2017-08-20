@@ -29,9 +29,10 @@ public class Server {
             System.out.println("Enviando administrador");
             outputStream.writeObject(admin);
             socket.close();
+            serverSocket.close();
 
         } catch (SocketException se) {
-            System.exit(0);
+            System.err.println("Error de socket");
         } catch (IOException e) {
             e.printStackTrace();
         }
