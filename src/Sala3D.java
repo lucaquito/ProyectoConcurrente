@@ -8,14 +8,13 @@
  *
  * @author luis
  */
-public class Sala3D extends Sala{
-    
-    
-    
-    
-    public Sala3D() {
-        this.setPrecio(3600.0);
-        
+public class Sala3D extends Sala {
+
+    public Sala3D(String nombre) {
+
+        this.setNombreSala(nombre);
+        this.setPrecio(3500.0);
+
     }
-    
+
 }

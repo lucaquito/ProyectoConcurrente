@@ -9,18 +9,19 @@
  * @author luis
  */
 public class SalaVIP extends Sala {
-    private String beneficios;
 
+    private String beneficios;
+    
     public String getBeneficios() {
         return beneficios;
     }
-
+    
     public void setBeneficios(String beneficios) {
         this.beneficios = beneficios;
     }
     
-    
-     public SalaVIP() {
+    public SalaVIP(String nombre) {
+        this.setNombreSala(nombre);
         this.setPrecio(4600.0);
         
     }

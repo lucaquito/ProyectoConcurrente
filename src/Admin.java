@@ -8,12 +8,12 @@ import javax.swing.ImageIcon;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author luis
  */
 public class Admin {
+
     private List<Pelicula> peliculas;
 
     public List<Pelicula> getPeliculas() {
@@ -27,20 +27,19 @@ public class Admin {
     public Admin() {
 
         this.peliculas = new LinkedList();
-        
+
     }
-    
-    
+
 //      private String nombre;
 //    private String sinopsis;
 //    private String duracion;
 //    private String censura;
 //    private List<Sala> salas;
 //    private ImageIcon photo;
-    public void agregarPelicula(String nombre, String sinopsis, String duracion, int censura, String photo){
-     Pelicula pelicula;
-     String censura2="";
-        switch(censura){
+    public void agregarPelicula(String nombre, String sinopsis, String duracion, int censura, String photo) {
+        Pelicula pelicula;
+        String censura2 = "";
+        switch (censura) {
             case 1:
                 censura2 = Censura.Mayores12.getCensura();
                 break;
@@ -54,16 +53,28 @@ public class Admin {
                 censura2 = Censura.TodoPublico.getCensura();
                 break;
         }
-        pelicula = new Pelicula(nombre,sinopsis,duracion,censura2);
+        pelicula = new Pelicula(nombre, sinopsis, duracion, censura2);
         pelicula.setPhoto(new ImageIcon(getClass().getResource(photo)));
-        
         peliculas.add(pelicula);
-        
-        
+
     }
-    
-    
-    
-    
-    
+
+    public boolean agregarSalaPelicula(Sala sala, String nombrePeli) {
+
+        int tamano = peliculas.size();
+
+        for (int i = 0; i < tamano; i++) {
+
+            Pelicula peli = peliculas.get(i);
+
+            if (peli.getNombre().equals(nombrePeli)) {
+                return true;
+            }
+
+        }
+
+        return false;
+
+    }
+
 }

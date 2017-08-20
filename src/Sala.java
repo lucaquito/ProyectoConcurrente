@@ -24,9 +24,6 @@ public class Sala {
         this.precio = precio;
     }
 
-  
-    
-
     public String getNombreSala() {
         return nombreSala;
     }
@@ -43,9 +40,8 @@ public class Sala {
         this.tandas = tandas;
     }
 
-    public Sala(String nombreSala, List<Tanda> tandas, Double precio) {
+    public Sala(String nombreSala,  Double precio) {
         this.nombreSala = nombreSala;
-        this.tandas = tandas;
         this.precio = precio;
     }
 
