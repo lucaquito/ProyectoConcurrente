@@ -30,9 +30,9 @@ public class Inicio extends javax.swing.JFrame {
         Sala3D sala3D = new Sala3D("Sala 3D");
         SalaVIP salavip = new SalaVIP("Sala VIP");
         
-        admin.agregarSalaPelicula(sala2D, "Spider-man");
-        admin.agregarSalaPelicula(sala3D, "Spider-man");
-        admin.agregarSalaPelicula(salavip, "Spider-man");
+        admin.agregarSalaPelicula(sala2D, "Spider-Man");
+        admin.agregarSalaPelicula(sala3D, "Spider-Man");
+        admin.agregarSalaPelicula(salavip, "Spider-Man");
         
         admin.agregarSalaPelicula(sala2D, "Planeta de los Simios");
         admin.agregarSalaPelicula(sala3D, "Planeta de los Simios");

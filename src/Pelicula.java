@@ -1,4 +1,5 @@
 
+import java.util.LinkedList;
 import java.util.List;
 import javax.swing.ImageIcon;
 
@@ -73,6 +74,7 @@ public class Pelicula {
         this.sinopsis = sinopsis;
         this.duracion = duracion;
         this.censura = censura;
+        this.salas = new LinkedList<Sala>();
     }
     
 }

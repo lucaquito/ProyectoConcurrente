@@ -24,8 +24,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public VentanaPrincipal(Admin admin) {
         initComponents();
         this.admin = admin;
-        
-        
+
         this.setSize(732, 468);
         this.setResizable(false);
         //JOptionPane.showMessageDialog(this, pelicula.getNombre());
@@ -36,41 +35,41 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         List listapeliculas = admin.getPeliculas();
         int tamano = listapeliculas.size();
         for (int i = 0; i < tamano; i++) {
-            
-            Pelicula peli= (Pelicula) listapeliculas.get(i);
-            switch (i){
+
+            Pelicula peli = (Pelicula) listapeliculas.get(i);
+            switch (i) {
                 case 0:
-                    JButton button =   pelicula1;
+                    JButton button = pelicula1;
                     button.setText(peli.getNombre());
                     JLabel label = imagen1;
                     label.setIcon(peli.getPhoto());
                     break;
                 case 1:
-                    JButton button2 =   pelicula2;
+                    JButton button2 = pelicula2;
                     button2.setText(peli.getNombre());
                     JLabel label2 = imagen2;
                     label2.setIcon(peli.getPhoto());
                     break;
                 case 2:
-                    JButton button3 =   pelicula3;
+                    JButton button3 = pelicula3;
                     button3.setText(peli.getNombre());
                     JLabel label3 = imagen3;
                     label3.setIcon(peli.getPhoto());
                     break;
                 case 3:
-                    JButton button4 =   pelicula4;
+                    JButton button4 = pelicula4;
                     button4.setText(peli.getNombre());
                     JLabel label4 = imagen4;
-                    label4.setIcon(peli.getPhoto()); 
+                    label4.setIcon(peli.getPhoto());
                     break;
                 case 4:
-                    JButton button5 =   pelicula5;
+                    JButton button5 = pelicula5;
                     button5.setText(peli.getNombre());
                     JLabel label5 = imagen5;
                     label5.setIcon(peli.getPhoto());
                     break;
                 case 5:
-                    JButton button6 =   pelicula6;
+                    JButton button6 = pelicula6;
                     button6.setText(peli.getNombre());
                     JLabel label6 = imagen6;
                     label6.setIcon(peli.getPhoto());
@@ -181,37 +180,37 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void pelicula2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pelicula2ActionPerformed
-        HorarioyTiquetes horarioytiquetes = new HorarioyTiquetes();
+        TipoSala tiposala = new TipoSala(admin, 1);
         this.setVisible(false);
-        horarioytiquetes.setVisible(true);
+        tiposala.setVisible(true);
     }//GEN-LAST:event_pelicula2ActionPerformed
 
     private void pelicula1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pelicula1ActionPerformed
-        TipoSala tiposala = new TipoSala();
+        TipoSala tiposala = new TipoSala(admin, 0);
         this.setVisible(false);
         tiposala.setVisible(true);
     }//GEN-LAST:event_pelicula1ActionPerformed
 
     private void pelicula3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pelicula3ActionPerformed
-        TipoSala tiposala = new TipoSala();
+        TipoSala tiposala = new TipoSala(admin, 2);
         this.setVisible(false);
         tiposala.setVisible(true);
     }//GEN-LAST:event_pelicula3ActionPerformed
 
     private void pelicula4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pelicula4ActionPerformed
-        TipoSala tiposala = new TipoSala();
+        TipoSala tiposala = new TipoSala(admin, 3);
         this.setVisible(false);
         tiposala.setVisible(true);
     }//GEN-LAST:event_pelicula4ActionPerformed
 
     private void pelicula5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pelicula5ActionPerformed
-       TipoSala tiposala = new TipoSala();
+        TipoSala tiposala = new TipoSala(admin, 4);
         this.setVisible(false);
         tiposala.setVisible(true);
     }//GEN-LAST:event_pelicula5ActionPerformed
 
     private void pelicula6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pelicula6ActionPerformed
-        TipoSala tiposala = new TipoSala();
+        TipoSala tiposala = new TipoSala(admin, 5);
         this.setVisible(false);
         tiposala.setVisible(true);
     }//GEN-LAST:event_pelicula6ActionPerformed

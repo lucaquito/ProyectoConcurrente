@@ -68,6 +68,7 @@ public class Admin {
             Pelicula peli = peliculas.get(i);
 
             if (peli.getNombre().equals(nombrePeli)) {
+                 peliculas.get(i).getSalas().add(sala);
                 return true;
             }
 

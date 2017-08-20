@@ -10,13 +10,32 @@
  */
 public class TipoSala extends javax.swing.JFrame {
 
+    private Admin admin;
+    private Pelicula peli;
+
     /**
      * Creates new form TipoSala
      */
-    public TipoSala() {
+    public TipoSala(Admin admin, int peli) {
         initComponents();
+        this.admin = admin;
+        this.peli = admin.getPeliculas().get(peli);
+        construirComboBox();
         this.setSize(640, 473);
         this.setResizable(false);
+    }
+
+    public void construirComboBox() {
+
+        int tamano = peli.getSalas().size();
+        CBTipoSala.removeAllItems();
+
+        for (int i = 0; i < tamano; i++) {
+
+            Sala sala = peli.getSalas().get(i);
+            CBTipoSala.addItem(sala.getNombreSala());
+        }
+
     }
 
     /**
@@ -46,7 +65,7 @@ public class TipoSala extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Seleccione el tipo de sala:");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(60, 30, 310, 24);
+        jLabel1.setBounds(60, 30, 310, 22);
 
         CBTipoSala.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         CBTipoSala.addActionListener(new java.awt.event.ActionListener() {
@@ -55,16 +74,18 @@ public class TipoSala extends javax.swing.JFrame {
             }
         });
         getContentPane().add(CBTipoSala);
-        CBTipoSala.setBounds(530, 110, 80, 40);
+        CBTipoSala.setBounds(500, 110, 110, 40);
 
+        jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jTextArea1.setText("3D:\n-Butacas reclinables\n-Sonido envolvente\n-Lentes y proyeccion 3D\n-No incluye comida");
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(40, 200, 400, 113);
+        jScrollPane1.setBounds(40, 200, 400, 100);
 
+        jTextArea2.setEditable(false);
         jTextArea2.setColumns(20);
         jTextArea2.setRows(5);
         jTextArea2.setText("VIP:\n-Butacas reclinables con movimiento \n-Lentes y proyeccion 3D\n-Incluye combo de palomitas grandes y 2 refrescos\n-Servicio personal a la butaca");
@@ -73,13 +94,14 @@ public class TipoSala extends javax.swing.JFrame {
         getContentPane().add(jScrollPane2);
         jScrollPane2.setBounds(40, 320, 404, 114);
 
+        jTextArea3.setEditable(false);
         jTextArea3.setColumns(20);
         jTextArea3.setRows(5);
         jTextArea3.setText("2D: \n-Sala con comodas butacas\n-Asientos enumerados\n-No incluye comida");
         jScrollPane3.setViewportView(jTextArea3);
 
         getContentPane().add(jScrollPane3);
-        jScrollPane3.setBounds(40, 80, 400, 113);
+        jScrollPane3.setBounds(40, 80, 400, 100);
 
         jButton4.setText("Siguiente");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -88,7 +110,7 @@ public class TipoSala extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(530, 20, 80, 23);
+        jButton4.setBounds(510, 20, 100, 27);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Cine Arte7 Talavera CC Los Alfares 7-4-2015 (21).JPG"))); // NOI18N
         getContentPane().add(jLabel2);
@@ -98,7 +120,7 @@ public class TipoSala extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        HorarioyTiquetes horarioytiquetes= new HorarioyTiquetes();
+        HorarioyTiquetes horarioytiquetes = new HorarioyTiquetes();
         this.setVisible(false);
         horarioytiquetes.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
@@ -134,12 +156,6 @@ public class TipoSala extends javax.swing.JFrame {
         }
         //</editor-fold>
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new TipoSala().setVisible(true);
-            }
-        });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
