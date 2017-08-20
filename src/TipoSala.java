@@ -29,16 +29,14 @@ public class TipoSala extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
+        CBTipoSala = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTextArea3 = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -46,9 +44,18 @@ public class TipoSala extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Adobe Caslon Pro", 0, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Tipo de Sala:");
+        jLabel1.setText("Seleccione el tipo de sala:");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(85, 33, 99, 19);
+        jLabel1.setBounds(60, 30, 310, 24);
+
+        CBTipoSala.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        CBTipoSala.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CBTipoSalaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(CBTipoSala);
+        CBTipoSala.setBounds(530, 110, 80, 40);
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -74,16 +81,6 @@ public class TipoSala extends javax.swing.JFrame {
         getContentPane().add(jScrollPane3);
         jScrollPane3.setBounds(40, 80, 400, 113);
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton1.setText("3D");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(540, 220, 70, 40);
-
         jButton4.setText("Siguiente");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,26 +90,6 @@ public class TipoSala extends javax.swing.JFrame {
         getContentPane().add(jButton4);
         jButton4.setBounds(530, 20, 80, 23);
 
-        jButton5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton5.setText("VIP");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton5);
-        jButton5.setBounds(540, 360, 70, 40);
-
-        jButton6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton6.setText("2D");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton6);
-        jButton6.setBounds(540, 100, 70, 40);
-
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Cine Arte7 Talavera CC Los Alfares 7-4-2015 (21).JPG"))); // NOI18N
         getContentPane().add(jLabel2);
         jLabel2.setBounds(0, 0, 640, 470);
@@ -121,25 +98,14 @@ public class TipoSala extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        Asientos asientos= new Asientos();
+        HorarioyTiquetes horarioytiquetes= new HorarioyTiquetes();
         this.setVisible(false);
-        asientos.setVisible(true);
+        horarioytiquetes.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        Asientos asientos= new Asientos();
-        asientos.setVisible(true);
-    }//GEN-LAST:event_jButton6ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Asientos asientos= new Asientos();
-        asientos.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        Asientos asientos= new Asientos();
-        asientos.setVisible(true);
-    }//GEN-LAST:event_jButton5ActionPerformed
+    private void CBTipoSalaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBTipoSalaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CBTipoSalaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -177,10 +143,8 @@ public class TipoSala extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JComboBox<String> CBTipoSala;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;

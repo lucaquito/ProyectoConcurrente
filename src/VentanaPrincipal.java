@@ -187,33 +187,33 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_pelicula2ActionPerformed
 
     private void pelicula1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pelicula1ActionPerformed
-        HorarioyTiquetes horarioytiquetes = new HorarioyTiquetes();
+        TipoSala tiposala = new TipoSala();
         this.setVisible(false);
-        horarioytiquetes.setVisible(true);
+        tiposala.setVisible(true);
     }//GEN-LAST:event_pelicula1ActionPerformed
 
     private void pelicula3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pelicula3ActionPerformed
-        HorarioyTiquetes horarioytiquetes = new HorarioyTiquetes();
+        TipoSala tiposala = new TipoSala();
         this.setVisible(false);
-        horarioytiquetes.setVisible(true);
+        tiposala.setVisible(true);
     }//GEN-LAST:event_pelicula3ActionPerformed
 
     private void pelicula4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pelicula4ActionPerformed
-        HorarioyTiquetes horarioytiquetes = new HorarioyTiquetes();
+        TipoSala tiposala = new TipoSala();
         this.setVisible(false);
-        horarioytiquetes.setVisible(true);
+        tiposala.setVisible(true);
     }//GEN-LAST:event_pelicula4ActionPerformed
 
     private void pelicula5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pelicula5ActionPerformed
-        HorarioyTiquetes horarioytiquetes = new HorarioyTiquetes();
+       TipoSala tiposala = new TipoSala();
         this.setVisible(false);
-        horarioytiquetes.setVisible(true);
+        tiposala.setVisible(true);
     }//GEN-LAST:event_pelicula5ActionPerformed
 
     private void pelicula6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pelicula6ActionPerformed
-        HorarioyTiquetes horarioytiquetes = new HorarioyTiquetes();
+        TipoSala tiposala = new TipoSala();
         this.setVisible(false);
-        horarioytiquetes.setVisible(true);
+        tiposala.setVisible(true);
     }//GEN-LAST:event_pelicula6ActionPerformed
 
     /**

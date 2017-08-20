@@ -63,7 +63,7 @@ public class HorarioyTiquetes extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Horario:");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(70, 70, 70, 22);
+        jLabel3.setBounds(70, 70, 100, 22);
 
         jButton2.setText(" 1:30 p.m.");
         getContentPane().add(jButton2);
@@ -81,7 +81,7 @@ public class HorarioyTiquetes extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Catidad de entradas:");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(310, 70, 190, 24);
+        jLabel2.setBounds(310, 70, 230, 24);
         getContentPane().add(jSpinner1);
         jSpinner1.setBounds(470, 130, 50, 30);
 
@@ -125,9 +125,9 @@ public class HorarioyTiquetes extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        TipoSala tiposala = new TipoSala();
+        Asientos asientos = new Asientos();
         this.setVisible(false);
-        tiposala.setVisible(true);
+        asientos.setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
