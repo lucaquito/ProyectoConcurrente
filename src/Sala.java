@@ -5,23 +5,14 @@ import java.util.List;
 public class Sala {
 
     private String nombreSala;
-    private List<String> listaHorarios;
-    private int[][] asientos;
+    private List<Tanda> listaHorarios;
 
-    public List<String> getListaHorarios() {
+    public List<Tanda> getListaHorarios() {
         return listaHorarios;
     }
 
-    public void setListaHorarios(List<String> listaHorarios) {
+    public void setListaHorarios(List<Tanda> listaHorarios) {
         this.listaHorarios = listaHorarios;
-    }
-
-    public int[][] getAsientos() {
-        return asientos;
-    }
-
-    public void setAsientos(int[][] asientos) {
-        this.asientos = asientos;
     }
 
     private Double precio;
@@ -49,9 +40,11 @@ public class Sala {
 
     public Sala() {
         this.listaHorarios = new LinkedList();
-        listaHorarios.add("1:30pm");
-        listaHorarios.add("3:30pm");
-        listaHorarios.add("7:00pm");
+        
+        listaHorarios.add(new Tanda("1:30pm"));
+        listaHorarios.add(new Tanda("3:30pm"));
+        listaHorarios.add(new Tanda("7:00pm"));
+
     }
 
 }

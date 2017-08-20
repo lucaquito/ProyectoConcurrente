@@ -1,11 +1,7 @@
 
+import javax.swing.JOptionPane;
 import javax.swing.SpinnerNumberModel;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 /**
  *
  * @author luis
@@ -39,7 +35,7 @@ public class HorarioyTiquetes extends javax.swing.JFrame {
 
         for (int i = 0; i < tamano; i++) {
 
-            String horario = sala.getListaHorarios().get(i);
+            String horario = sala.getListaHorarios().get(i).getNombre();
             CBHorario.addItem(horario);
         }
 
@@ -124,7 +120,7 @@ public class HorarioyTiquetes extends javax.swing.JFrame {
         getContentPane().add(jButton5);
         jButton5.setBounds(470, 350, 100, 27);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Asientos-Cine-Rojos.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Peliculas/Otras/Asientos-Cine-Rojos.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 600, 410);
@@ -133,9 +129,26 @@ public class HorarioyTiquetes extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        Asientos asientos = new Asientos();
-        this.setVisible(false);
-        asientos.setVisible(true);
+
+        //    CBHorario.getSelectedIndex();
+        int cantidadAdultos = (Integer) jSpinner1.getValue();
+        int cantidadNinos = (Integer) jSpinner2.getValue();
+        int cantidadAdultoMayor = (Integer) jSpinner3.getValue();
+
+        if (cantidadAdultos != 0 || cantidadNinos != 0 || cantidadAdultoMayor != 0) {
+
+            admin.setCantAdultos(cantidadAdultos);
+            admin.setCantNinos(cantidadNinos);
+            admin.setCantAdultoMayor(cantidadAdultoMayor);
+            Asientos asientos = new Asientos();
+            this.setVisible(false);
+            asientos.setVisible(true);
+
+        } else {
+            JOptionPane.showMessageDialog(this, "Debe seleccionar la cantidad de personas");
+        }
+
+
     }//GEN-LAST:event_jButton5ActionPerformed
 
     /**

@@ -3,11 +3,6 @@ import java.util.LinkedList;
 import java.util.List;
 import javax.swing.ImageIcon;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 /**
  *
  * @author luis
@@ -15,6 +10,33 @@ import javax.swing.ImageIcon;
 public class Admin {
 
     private List<Pelicula> peliculas;
+    private int cantAdultos = 0;
+    private int cantNinos = 0;
+    private int cantAdultoMayor = 0;
+
+    public int getCantAdultos() {
+        return cantAdultos;
+    }
+
+    public void setCantAdultos(int cantAdultos) {
+        this.cantAdultos = cantAdultos;
+    }
+
+    public int getCantNinos() {
+        return cantNinos;
+    }
+
+    public void setCantNinos(int cantNinos) {
+        this.cantNinos = cantNinos;
+    }
+
+    public int getCantAdultoMayor() {
+        return cantAdultoMayor;
+    }
+
+    public void setCantAdultoMayor(int cantAdultoMayor) {
+        this.cantAdultoMayor = cantAdultoMayor;
+    }
 
     public List<Pelicula> getPeliculas() {
         return peliculas;
@@ -62,7 +84,7 @@ public class Admin {
             Pelicula peli = peliculas.get(i);
 
             if (peli.getNombre().equals(nombrePeli)) {
-                 peliculas.get(i).getSalas().add(sala);
+                peliculas.get(i).getSalas().add(sala);
                 return true;
             }
 
