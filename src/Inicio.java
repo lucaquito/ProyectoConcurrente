@@ -34,16 +34,21 @@ public class Inicio extends javax.swing.JFrame {
         admin.agregarSalaPelicula(sala3D, "Spider-man");
         admin.agregarSalaPelicula(salavip, "Spider-man");
         
-        admin.agregarSalaPelicula(salavip, "Spider-man");
-        admin.agregarSalaPelicula(salavip, "Spider-man");
-        admin.agregarSalaPelicula(salavip, "Spider-man");
+        admin.agregarSalaPelicula(sala2D, "Planeta de los Simios");
+        admin.agregarSalaPelicula(sala3D, "Planeta de los Simios");
+        admin.agregarSalaPelicula(salavip, "Planeta de los Simios");
         
-        admin.agregarSalaPelicula(salavip, "Spider-man");
-        admin.agregarSalaPelicula(salavip, "Spider-man");
-        admin.agregarSalaPelicula(salavip, "Spider-man");
+        admin.agregarSalaPelicula(sala2D, "Anabelle 2");
+        admin.agregarSalaPelicula(sala3D, "Anabelle 2");
+        admin.agregarSalaPelicula(salavip, "Anabelle 2");
         
+        admin.agregarSalaPelicula(sala2D, "Cars 3");
+        admin.agregarSalaPelicula(sala3D, "Cars 3");
         
+        admin.agregarSalaPelicula(sala2D, "Emoji");
         
+        admin.agregarSalaPelicula(sala2D, "Mi vilano Favorito 3");
+        admin.agregarSalaPelicula(sala3D, "Mi vilano Favorito 3");
         
     }
 
