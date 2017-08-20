@@ -52,7 +52,7 @@ public class VentanaFactura extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(630, 30, 53, 23);
+        jButton1.setBounds(630, 30, 35, 27);
 
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel11.setText("978967569467458");
@@ -87,33 +87,33 @@ public class VentanaFactura extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel6.setText("jLabel6");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(390, 130, 86, 14);
+        jLabel6.setBounds(390, 120, 150, 30);
 
         jLabel7.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel7.setText("jLabel7");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(390, 180, 86, 22);
+        jLabel7.setBounds(390, 180, 150, 22);
 
         jLabel8.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel8.setText("jLabel8");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(390, 210, 86, 22);
+        jLabel8.setBounds(390, 210, 150, 22);
 
         jLabel9.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel9.setText("jLabel9");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(390, 240, 86, 22);
+        jLabel9.setBounds(390, 240, 150, 22);
 
         jLabel10.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel10.setText("jLabel10");
         getContentPane().add(jLabel10);
-        jLabel10.setBounds(390, 280, 86, 22);
+        jLabel10.setBounds(390, 280, 150, 22);
 
         jLabel12.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Peliculas/Otras/82a3255f-dc5a-4dd6-8ea1-eb4380ffa54f.jpg"))); // NOI18N
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Otras/82a3255f-dc5a-4dd6-8ea1-eb4380ffa54f.jpg"))); // NOI18N
         jLabel12.setText("jLabel12");
         getContentPane().add(jLabel12);
-        jLabel12.setBounds(0, -10, 718, 451);
+        jLabel12.setBounds(0, -10, 718, 460);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
