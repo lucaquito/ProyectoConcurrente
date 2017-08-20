@@ -1,15 +1,13 @@
+
+import java.io.Serializable;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+public class Tanda implements Serializable {
 
-/**
- *
- * @author mortasoft
- */
-public class Tanda {
-    
     private String nombre;
     private int[][] asientos;
 
@@ -36,8 +34,5 @@ public class Tanda {
         this.nombre = nombre;
         this.asientos = new int[15][5];
     }
-    
-    
-    
-    
+
 }

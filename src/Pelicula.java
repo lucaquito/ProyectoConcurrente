@@ -1,4 +1,5 @@
 
+import java.io.Serializable;
 import java.util.LinkedList;
 import java.util.List;
 import javax.swing.ImageIcon;
@@ -13,7 +14,7 @@ import javax.swing.ImageIcon;
  *
  * @author luis
  */
-public class Pelicula {
+public class Pelicula implements Serializable{
     private String nombre;
     private String sinopsis;
     private String duracion;

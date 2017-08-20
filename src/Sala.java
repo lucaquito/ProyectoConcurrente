@@ -1,8 +1,9 @@
 
+import java.io.Serializable;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Sala {
+public class Sala implements Serializable{
 
     private String nombreSala;
     private List<Tanda> listaHorarios;

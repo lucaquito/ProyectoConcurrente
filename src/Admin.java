@@ -1,4 +1,5 @@
 
+import java.io.Serializable;
 import java.util.LinkedList;
 import java.util.List;
 import javax.swing.ImageIcon;
@@ -7,7 +8,7 @@ import javax.swing.ImageIcon;
  *
  * @author luis
  */
-public class Admin {
+public class Admin implements Serializable{
 
     private List<Pelicula> peliculas;
     private int cantAdultos = 0;
@@ -92,6 +93,22 @@ public class Admin {
 
         return false;
 
+    }
+    
+    public String imprimirPeliculas(){
+    
+        int tamano = peliculas.size();
+        String salida = "";
+        
+        for (int i = 0; i < tamano; i++) {
+            
+            Pelicula peli = peliculas.get(i);
+            salida += peli.getNombre() + "\n";
+         
+        }
+    
+        return salida;
+    
     }
 
 }

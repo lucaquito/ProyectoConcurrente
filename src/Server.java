@@ -1,6 +1,7 @@
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketException;
@@ -10,16 +11,23 @@ public class Server {
     private ServerSocket serverSocket = null;
     private Socket socket = null;
     private ObjectInputStream inStream = null;
+    private ObjectOutputStream outputStream = null;
+    private Admin admin;
 
-    public void communicate() {
+    public Server(Admin admin) {
+        this.admin = admin;
+    }
+
+    public void communicate() throws ClassNotFoundException {
         try {
             serverSocket = new ServerSocket(4445);
             socket = serverSocket.accept();
-            System.out.println("Connected");
-            inStream = new ObjectInputStream(socket.getInputStream());
+            System.out.println("Conectado");
 
-        //    Student student = (Student) inStream.readObject();
-          //  System.out.println("Object received = " + student);
+            outputStream = new ObjectOutputStream(socket.getOutputStream());
+            
+            System.out.println("Enviando administrador");
+            outputStream.writeObject(admin);
             socket.close();
 
         } catch (SocketException se) {

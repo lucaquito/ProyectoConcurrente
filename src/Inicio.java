@@ -1,14 +1,19 @@
+
+import java.io.IOException;
+import java.net.ConnectException;
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author luis
  */
 public class Inicio extends javax.swing.JFrame {
+
     private Admin admin;
 
     /**
@@ -25,33 +30,51 @@ public class Inicio extends javax.swing.JFrame {
         admin.agregarPelicula("Cars 3", "", "176 Min", 1, "Peliculas/cars-3.jpg");
         admin.agregarPelicula("Emoji", "", "136 Min", 1, "Peliculas/emoji.jpeg");
         admin.agregarPelicula("Mi vilano Favorito 3", "", "126 Min", 1, "Peliculas/mi.jpg");
-        
+
         Sala2D sala2D = new Sala2D("Sala 2D");
         Sala3D sala3D = new Sala3D("Sala 3D");
         SalaVIP salavip = new SalaVIP("Sala VIP");
-        
+
         admin.agregarSalaPelicula(sala2D, "Spider-Man");
         admin.agregarSalaPelicula(sala3D, "Spider-Man");
         admin.agregarSalaPelicula(salavip, "Spider-Man");
-        
+
         admin.agregarSalaPelicula(sala2D, "Planeta de los Simios");
         admin.agregarSalaPelicula(sala3D, "Planeta de los Simios");
         admin.agregarSalaPelicula(salavip, "Planeta de los Simios");
-        
+
         admin.agregarSalaPelicula(sala2D, "Anabelle 2");
         admin.agregarSalaPelicula(sala3D, "Anabelle 2");
         admin.agregarSalaPelicula(salavip, "Anabelle 2");
-        
+
         admin.agregarSalaPelicula(sala2D, "Cars 3");
         admin.agregarSalaPelicula(sala3D, "Cars 3");
-        
+
         admin.agregarSalaPelicula(sala2D, "Emoji");
-        
+
         admin.agregarSalaPelicula(sala2D, "Mi vilano Favorito 3");
         admin.agregarSalaPelicula(sala3D, "Mi vilano Favorito 3");
+
+    }
+
+    private void Conectar() {
+
+        String nombre = txtNombre.getText();
+        int puerto = Integer.parseInt(txtPuerto.getText());
+
+        Client cliente = new Client(nombre, puerto);
+        admin = cliente.recibirAdmin();
+        
+        if(admin==null){
+        JOptionPane.showMessageDialog(this, "Ocurrió un error");
+        }else{
+        VentanaPrincipal ventanaprincipal = new VentanaPrincipal(admin);
+        this.setVisible(false);
+        ventanaprincipal.setVisible(true);
         
         
-        
+        }
+
     }
 
     /**
@@ -65,10 +88,11 @@ public class Inicio extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        txtNombre = new javax.swing.JTextField();
+        txtPuerto = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -76,43 +100,58 @@ public class Inicio extends javax.swing.JFrame {
 
         jLabel1.setText("Nombre:");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(20, 40, 50, 14);
+        jLabel1.setBounds(20, 40, 50, 17);
 
         jLabel2.setText("Puerto:");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(20, 80, 50, 14);
+        jLabel2.setBounds(20, 80, 50, 17);
 
-        jTextField1.setText("localhost");
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(100, 30, 128, 30);
+        txtNombre.setText("localhost");
+        getContentPane().add(txtNombre);
+        txtNombre.setBounds(100, 30, 128, 30);
 
-        jTextField3.setText("4445");
-        getContentPane().add(jTextField3);
-        jTextField3.setBounds(100, 70, 128, 30);
+        txtPuerto.setText("4445");
+        getContentPane().add(txtPuerto);
+        txtPuerto.setBounds(100, 70, 128, 30);
 
-        jButton1.setText("Conectar");
+        jButton1.setText("En red");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(160, 110, 90, 23);
+        jButton1.setBounds(60, 110, 90, 27);
 
         jLabel3.setText("Cinema 4000");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(90, 10, 70, 14);
+        jLabel3.setBounds(90, 10, 70, 17);
+
+        jButton2.setText("Conectar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2);
+        jButton2.setBounds(160, 110, 90, 27);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-       VentanaPrincipal ventanaprincipal = new VentanaPrincipal(admin);
-       this.setVisible(false);
-       ventanaprincipal.setVisible(true);
-        
+
+        Conectar();
+
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+
+        VentanaPrincipal ventanaprincipal = new VentanaPrincipal(admin);
+        this.setVisible(false);
+        ventanaprincipal.setVisible(true);
+
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -151,10 +190,11 @@ public class Inicio extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField txtNombre;
+    private javax.swing.JTextField txtPuerto;
     // End of variables declaration//GEN-END:variables
 }

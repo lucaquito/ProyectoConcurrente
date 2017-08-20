@@ -1,9 +1,12 @@
 
+import java.io.Serializable;
+
+
 /**
  *
  * @author luis
  */
-public class Sala2D extends Sala {
+public class Sala2D extends Sala implements Serializable{
     
     public Sala2D(String nombre) {
 
