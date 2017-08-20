@@ -81,7 +81,7 @@ public class HorarioyTiquetes extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Catidad de entradas:");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(309, 73, 160, 19);
+        jLabel2.setBounds(310, 70, 190, 24);
         getContentPane().add(jSpinner1);
         jSpinner1.setBounds(470, 130, 50, 30);
 
@@ -89,13 +89,13 @@ public class HorarioyTiquetes extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Adultos");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(290, 130, 80, 19);
+        jLabel4.setBounds(290, 130, 80, 24);
 
         jLabel6.setFont(new java.awt.Font("Adobe Caslon Pro", 0, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Niño");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(290, 200, 40, 19);
+        jLabel6.setBounds(290, 200, 40, 24);
         getContentPane().add(jSpinner2);
         jSpinner2.setBounds(470, 200, 50, 30);
 
@@ -103,7 +103,7 @@ public class HorarioyTiquetes extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Adulto Mayor");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(280, 270, 160, 19);
+        jLabel7.setBounds(280, 270, 160, 24);
         getContentPane().add(jSpinner3);
         jSpinner3.setBounds(470, 270, 50, 30);
 

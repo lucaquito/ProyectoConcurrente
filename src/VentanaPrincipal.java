@@ -100,28 +100,24 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         pelicula4 = new javax.swing.JButton();
         pelicula5 = new javax.swing.JButton();
         pelicula6 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
         getContentPane().add(imagen1);
         imagen1.setBounds(50, 40, 130, 130);
+
+        imagen2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Peliculas/cars-3.jpg"))); // NOI18N
         getContentPane().add(imagen2);
-        imagen2.setBounds(300, 30, 130, 0);
+        imagen2.setBounds(310, 30, 130, 140);
         getContentPane().add(imagen3);
-        imagen3.setBounds(550, 40, 0, 0);
-
-        imagen4.setText("jLabel8");
+        imagen3.setBounds(550, 30, 130, 140);
         getContentPane().add(imagen4);
-        imagen4.setBounds(50, 260, 130, 130);
-
-        imagen5.setText("jLabel10");
+        imagen4.setBounds(50, 240, 130, 140);
         getContentPane().add(imagen5);
-        imagen5.setBounds(310, 260, 130, 130);
-
-        imagen6.setText("jLabel12");
+        imagen5.setBounds(310, 240, 140, 140);
         getContentPane().add(imagen6);
-        imagen6.setBounds(550, 260, 130, 14);
+        imagen6.setBounds(550, 260, 130, 130);
 
         pelicula1.setText("Planeta de los Simios");
         pelicula1.addActionListener(new java.awt.event.ActionListener() {
@@ -177,9 +173,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         getContentPane().add(pelicula6);
         pelicula6.setBounds(530, 400, 160, 23);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sala4.jpg"))); // NOI18N
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, 0, 750, 470);
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sala4.jpg"))); // NOI18N
+        getContentPane().add(fondo);
+        fondo.setBounds(-10, -120, 850, 730);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -251,13 +247,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel fondo;
     private javax.swing.JLabel imagen1;
     private javax.swing.JLabel imagen2;
     private javax.swing.JLabel imagen3;
     private javax.swing.JLabel imagen4;
     private javax.swing.JLabel imagen5;
     private javax.swing.JLabel imagen6;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JButton pelicula1;
     private javax.swing.JButton pelicula2;
     private javax.swing.JButton pelicula3;
