@@ -120,7 +120,7 @@ public class HorarioyTiquetes extends javax.swing.JFrame {
         getContentPane().add(jButton5);
         jButton5.setBounds(470, 350, 100, 27);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Peliculas/Otras/Asientos-Cine-Rojos.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Otras/Asientos-Cine-Rojos.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 600, 410);

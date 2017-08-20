@@ -107,7 +107,7 @@ public class TipoSala extends javax.swing.JFrame {
         getContentPane().add(jButton4);
         jButton4.setBounds(510, 20, 100, 27);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Peliculas/Otras/Cine Arte7 Talavera CC Los Alfares 7-4-2015 (21).JPG"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Otras/Cine Arte7 Talavera CC Los Alfares 7-4-2015 (21).JPG"))); // NOI18N
         getContentPane().add(jLabel2);
         jLabel2.setBounds(0, 0, 640, 470);
 

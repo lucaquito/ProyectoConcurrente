@@ -1,8 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -118,10 +115,19 @@ public class Asientos extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(513, 370, 90, 23);
+        jButton1.setBounds(513, 370, 90, 27);
 
         ASiento1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
-        ASiento1.setOpaque(false);
+        ASiento1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ASiento1MouseClicked(evt);
+            }
+        });
+        ASiento1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ASiento1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(ASiento1);
         ASiento1.setBounds(70, 80, 30, 30);
 
@@ -310,142 +316,114 @@ public class Asientos extends javax.swing.JFrame {
         Asiento2.setBounds(100, 80, 30, 30);
 
         Asiento55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
-        Asiento55.setOpaque(false);
         getContentPane().add(Asiento55);
         Asiento55.setBounds(340, 200, 30, 30);
 
         Asiento70.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
-        Asiento70.setOpaque(false);
         getContentPane().add(Asiento70);
         Asiento70.setBounds(340, 240, 30, 30);
 
         Asiento11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
-        Asiento11.setOpaque(false);
         getContentPane().add(Asiento11);
         Asiento11.setBounds(370, 80, 30, 30);
 
         Asiento41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
-        Asiento41.setOpaque(false);
         getContentPane().add(Asiento41);
         Asiento41.setBounds(370, 160, 30, 30);
 
         Asiento56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
-        Asiento56.setOpaque(false);
         getContentPane().add(Asiento56);
         Asiento56.setBounds(370, 200, 30, 30);
 
         Asiento71.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
-        Asiento71.setOpaque(false);
         getContentPane().add(Asiento71);
         Asiento71.setBounds(370, 240, 30, 30);
 
         Asiento12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
-        Asiento12.setOpaque(false);
         getContentPane().add(Asiento12);
         Asiento12.setBounds(400, 80, 30, 30);
 
         Asiento42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
-        Asiento42.setOpaque(false);
         getContentPane().add(Asiento42);
         Asiento42.setBounds(400, 160, 30, 30);
 
         Asiento57.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
-        Asiento57.setOpaque(false);
         getContentPane().add(Asiento57);
         Asiento57.setBounds(400, 200, 30, 30);
 
         Asiento72.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
-        Asiento72.setOpaque(false);
         getContentPane().add(Asiento72);
         Asiento72.setBounds(400, 240, 30, 30);
 
         Asiento13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
-        Asiento13.setOpaque(false);
         getContentPane().add(Asiento13);
         Asiento13.setBounds(430, 80, 30, 30);
 
         Asiento28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
-        Asiento28.setOpaque(false);
         getContentPane().add(Asiento28);
         Asiento28.setBounds(430, 120, 30, 30);
 
         Asiento43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
-        Asiento43.setOpaque(false);
         getContentPane().add(Asiento43);
         Asiento43.setBounds(430, 160, 30, 30);
 
         Asiento58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
-        Asiento58.setOpaque(false);
         getContentPane().add(Asiento58);
         Asiento58.setBounds(430, 200, 30, 30);
 
         Asiento73.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
-        Asiento73.setOpaque(false);
         getContentPane().add(Asiento73);
         Asiento73.setBounds(430, 240, 30, 30);
 
         Asiento14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
-        Asiento14.setOpaque(false);
         getContentPane().add(Asiento14);
         Asiento14.setBounds(460, 80, 30, 30);
 
         Asiento15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
-        Asiento15.setOpaque(false);
         getContentPane().add(Asiento15);
         Asiento15.setBounds(490, 80, 30, 30);
 
         Asiento29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
-        Asiento29.setOpaque(false);
         getContentPane().add(Asiento29);
         Asiento29.setBounds(460, 120, 30, 30);
 
         Asiento30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
-        Asiento30.setOpaque(false);
         getContentPane().add(Asiento30);
         Asiento30.setBounds(490, 120, 30, 30);
 
         Asiento44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
-        Asiento44.setOpaque(false);
         getContentPane().add(Asiento44);
         Asiento44.setBounds(460, 160, 30, 30);
 
         Asiento45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
-        Asiento45.setOpaque(false);
         getContentPane().add(Asiento45);
         Asiento45.setBounds(490, 160, 30, 30);
 
         Asiento59.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
-        Asiento59.setOpaque(false);
         getContentPane().add(Asiento59);
         Asiento59.setBounds(460, 200, 30, 30);
 
         Asiento60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
-        Asiento60.setOpaque(false);
         getContentPane().add(Asiento60);
         Asiento60.setBounds(490, 200, 30, 30);
 
         Asiento74.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
-        Asiento74.setOpaque(false);
         getContentPane().add(Asiento74);
         Asiento74.setBounds(460, 240, 30, 30);
 
         Asiento75.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
-        Asiento75.setOpaque(false);
         getContentPane().add(Asiento75);
         Asiento75.setBounds(490, 240, 30, 30);
 
         Asiento26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
-        Asiento26.setOpaque(false);
         getContentPane().add(Asiento26);
         Asiento26.setBounds(370, 120, 30, 30);
 
         Asiento27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
-        Asiento27.setOpaque(false);
         getContentPane().add(Asiento27);
         Asiento27.setBounds(400, 120, 30, 30);
 
         Asiento69.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
-        Asiento69.setOpaque(false);
         getContentPane().add(Asiento69);
         Asiento69.setBounds(310, 240, 30, 30);
 
@@ -472,6 +450,16 @@ public class Asientos extends javax.swing.JFrame {
         this.setVisible(false);
         ventanafactura.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void ASiento1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ASiento1MouseClicked
+      
+      ASiento1.setIcon(new ImageIcon(getClass().getResource("Otras/asientoiconorojo.jpg")));
+
+    }//GEN-LAST:event_ASiento1MouseClicked
+
+    private void ASiento1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ASiento1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ASiento1ActionPerformed
 
     /**
      * @param args the command line arguments
