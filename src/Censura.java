@@ -10,7 +10,6 @@
  */
 public enum Censura {
     
-    
     Mayores12("Mayores de 12"), 
     Mayores15("Mayores de 15"), 
     Mayores18("Mayores de 18"), 
