@@ -43,37 +43,37 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                     JButton button =   pelicula1;
                     button.setText(peli.getNombre());
                     JLabel label = imagen1;
-                    imagen1.setIcon(peli.getPhoto());
+                    label.setIcon(peli.getPhoto());
                     break;
                 case 1:
                     JButton button2 =   pelicula2;
                     button2.setText(peli.getNombre());
                     JLabel label2 = imagen2;
-                    imagen2.setIcon(peli.getPhoto());
+                    label2.setIcon(peli.getPhoto());
                     break;
                 case 2:
                     JButton button3 =   pelicula3;
                     button3.setText(peli.getNombre());
                     JLabel label3 = imagen3;
-                    imagen3.setIcon(peli.getPhoto());
+                    label3.setIcon(peli.getPhoto());
                     break;
                 case 3:
                     JButton button4 =   pelicula4;
                     button4.setText(peli.getNombre());
                     JLabel label4 = imagen4;
-                    imagen3.setIcon(peli.getPhoto()); 
+                    label4.setIcon(peli.getPhoto()); 
                     break;
                 case 4:
                     JButton button5 =   pelicula5;
                     button5.setText(peli.getNombre());
                     JLabel label5 = imagen5;
-                    imagen5.setIcon(peli.getPhoto());
+                    label5.setIcon(peli.getPhoto());
                     break;
                 case 5:
                     JButton button6 =   pelicula6;
                     button6.setText(peli.getNombre());
                     JLabel label6 = imagen6;
-                    imagen6.setIcon(peli.getPhoto());
+                    label6.setIcon(peli.getPhoto());
                     break;
             }
         }
@@ -105,73 +105,73 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
         getContentPane().add(imagen1);
-        imagen1.setBounds(50, 40, 130, 130);
-
-        imagen2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Peliculas/cars-3.jpg"))); // NOI18N
+        imagen1.setBounds(40, 30, 160, 140);
         getContentPane().add(imagen2);
         imagen2.setBounds(310, 30, 130, 140);
-        getContentPane().add(imagen3);
-        imagen3.setBounds(550, 30, 130, 140);
-        getContentPane().add(imagen4);
-        imagen4.setBounds(50, 240, 130, 140);
-        getContentPane().add(imagen5);
-        imagen5.setBounds(310, 240, 140, 140);
-        getContentPane().add(imagen6);
-        imagen6.setBounds(550, 260, 130, 130);
 
-        pelicula1.setText("Planeta de los Simios");
+        imagen3.setBackground(new java.awt.Color(7, 2, 2));
+        getContentPane().add(imagen3);
+        imagen3.setBounds(540, 30, 130, 140);
+        getContentPane().add(imagen4);
+        imagen4.setBounds(50, 240, 140, 140);
+        getContentPane().add(imagen5);
+        imagen5.setBounds(290, 230, 160, 140);
+        getContentPane().add(imagen6);
+        imagen6.setBounds(540, 240, 150, 140);
+
+        pelicula1.setText("Pelicula1");
         pelicula1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pelicula1ActionPerformed(evt);
             }
         });
         getContentPane().add(pelicula1);
-        pelicula1.setBounds(40, 180, 160, 23);
+        pelicula1.setBounds(40, 180, 160, 27);
 
-        pelicula2.setText("Cars 3");
+        pelicula2.setText("Pelicula2");
         pelicula2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pelicula2ActionPerformed(evt);
             }
         });
         getContentPane().add(pelicula2);
-        pelicula2.setBounds(290, 180, 160, 23);
+        pelicula2.setBounds(290, 180, 160, 27);
 
-        pelicula3.setText("Mi villano favorito 3");
+        pelicula3.setText("Pelicula3");
         pelicula3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pelicula3ActionPerformed(evt);
             }
         });
         getContentPane().add(pelicula3);
-        pelicula3.setBounds(540, 180, 140, 23);
+        pelicula3.setBounds(540, 180, 140, 27);
 
-        pelicula4.setText("Emoji");
+        pelicula4.setText("Pelicula4");
         pelicula4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pelicula4ActionPerformed(evt);
             }
         });
         getContentPane().add(pelicula4);
-        pelicula4.setBounds(40, 400, 170, 23);
+        pelicula4.setBounds(40, 400, 170, 27);
 
-        pelicula5.setText("Spiderman Home Coming");
+        pelicula5.setText("Pelicula5");
         pelicula5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pelicula5ActionPerformed(evt);
             }
         });
         getContentPane().add(pelicula5);
-        pelicula5.setBounds(280, 400, 190, 23);
+        pelicula5.setBounds(280, 400, 190, 27);
 
-        pelicula6.setText("Annabelle 2");
+        pelicula6.setText("Pelicula6");
         pelicula6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pelicula6ActionPerformed(evt);
             }
         });
         getContentPane().add(pelicula6);
-        pelicula6.setBounds(530, 400, 160, 23);
+        pelicula6.setBounds(530, 400, 160, 27);
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sala4.jpg"))); // NOI18N
         getContentPane().add(fondo);

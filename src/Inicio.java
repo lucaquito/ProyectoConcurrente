@@ -22,7 +22,7 @@ public class Inicio extends javax.swing.JFrame {
         admin.agregarPelicula("Spider-Man", "", "156 Min", 2, "Peliculas/spider-man.png");
         admin.agregarPelicula("Planeta de los Simios", "", "166 Min", 2, "Peliculas/Dawn-Planet-of-the-Apes-Poster-Large-128x128.jpg");
         admin.agregarPelicula("Anabelle 2", "", "146 Min", 3, "Peliculas/ana.jpg");
-        admin.agregarPelicula("Cars 3", "", "176 Min", 1, "Peliculas/ana.jpg");
+        admin.agregarPelicula("Cars 3", "", "176 Min", 1, "Peliculas/cars-3.jpg");
         admin.agregarPelicula("Emoji", "", "136 Min", 1, "Peliculas/emoji.jpeg");
         admin.agregarPelicula("Mi vilano Favorito 3", "", "126 Min", 1, "Peliculas/mi.jpg");
         
