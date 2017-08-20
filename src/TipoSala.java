@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /**
  *
@@ -120,7 +115,9 @@ public class TipoSala extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        HorarioyTiquetes horarioytiquetes = new HorarioyTiquetes();
+        int salaI = CBTipoSala.getSelectedIndex();
+        Sala sala = peli.getSalas().get(salaI);
+        HorarioyTiquetes horarioytiquetes = new HorarioyTiquetes(admin,sala);
         this.setVisible(false);
         horarioytiquetes.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed

@@ -1,19 +1,29 @@
 
+import java.util.LinkedList;
 import java.util.List;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author luis
- */
 public class Sala {
+
     private String nombreSala;
-    private List<Tanda> tandas;
+    private List<String> listaHorarios;
+    private int[][] asientos;
+
+    public List<String> getListaHorarios() {
+        return listaHorarios;
+    }
+
+    public void setListaHorarios(List<String> listaHorarios) {
+        this.listaHorarios = listaHorarios;
+    }
+
+    public int[][] getAsientos() {
+        return asientos;
+    }
+
+    public void setAsientos(int[][] asientos) {
+        this.asientos = asientos;
+    }
+
     private Double precio;
 
     public Double getPrecio() {
@@ -32,23 +42,16 @@ public class Sala {
         this.nombreSala = nombreSala;
     }
 
-    public List<Tanda> getTandas() {
-        return tandas;
-    }
-
-    public void setTandas(List<Tanda> tandas) {
-        this.tandas = tandas;
-    }
-
-    public Sala(String nombreSala,  Double precio) {
+    public Sala(String nombreSala, Double precio) {
         this.nombreSala = nombreSala;
         this.precio = precio;
     }
 
-   
-
     public Sala() {
+        this.listaHorarios = new LinkedList();
+        listaHorarios.add("1:30pm");
+        listaHorarios.add("3:30pm");
+        listaHorarios.add("7:00pm");
     }
-    
-  
+
 }

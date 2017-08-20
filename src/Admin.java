@@ -30,12 +30,6 @@ public class Admin {
 
     }
 
-//      private String nombre;
-//    private String sinopsis;
-//    private String duracion;
-//    private String censura;
-//    private List<Sala> salas;
-//    private ImageIcon photo;
     public void agregarPelicula(String nombre, String sinopsis, String duracion, int censura, String photo) {
         Pelicula pelicula;
         String censura2 = "";

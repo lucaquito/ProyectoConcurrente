@@ -12,19 +12,37 @@ import javax.swing.SpinnerNumberModel;
  */
 public class HorarioyTiquetes extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Sinopsis
-     */
-    public HorarioyTiquetes() {
+    private Admin admin;
+    private Sala sala;
+
+    public HorarioyTiquetes(Admin admin, Sala sala) {
         initComponents();
+        this.admin = admin;
+        this.sala = sala;
         ((SpinnerNumberModel) jSpinner1.getModel()).setMinimum(0);
         ((SpinnerNumberModel) jSpinner2.getModel()).setMinimum(0);
         ((SpinnerNumberModel) jSpinner3.getModel()).setMinimum(0);
         ((SpinnerNumberModel) jSpinner1.getModel()).setMaximum(10);
         ((SpinnerNumberModel) jSpinner2.getModel()).setMaximum(10);
         ((SpinnerNumberModel) jSpinner3.getModel()).setMaximum(10);
+
         this.setSize(603, 412);
         this.setResizable(false);
+        construirComboBox();
+    }
+
+    public void construirComboBox() {
+
+        int tamano = sala.getListaHorarios().size();
+
+        CBHorario.removeAllItems();
+
+        for (int i = 0; i < tamano; i++) {
+
+            String horario = sala.getListaHorarios().get(i);
+            CBHorario.addItem(horario);
+        }
+
     }
 
     /**
@@ -40,10 +58,8 @@ public class HorarioyTiquetes extends javax.swing.JFrame {
         jPopupMenu2 = new javax.swing.JPopupMenu();
         jPopupMenu3 = new javax.swing.JPopupMenu();
         popupMenu1 = new java.awt.PopupMenu();
+        CBHorario = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jSpinner1 = new javax.swing.JSpinner();
         jLabel4 = new javax.swing.JLabel();
@@ -59,53 +75,45 @@ public class HorarioyTiquetes extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
+        CBHorario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        getContentPane().add(CBHorario);
+        CBHorario.setBounds(40, 110, 150, 27);
+
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Horario:");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(70, 70, 100, 22);
 
-        jButton2.setText(" 1:30 p.m.");
-        getContentPane().add(jButton2);
-        jButton2.setBounds(60, 130, 83, 23);
-
-        jButton3.setText("4:00 p.m.");
-        getContentPane().add(jButton3);
-        jButton3.setBounds(60, 200, 79, 23);
-
-        jButton4.setText("7:00 p.m.");
-        getContentPane().add(jButton4);
-        jButton4.setBounds(60, 270, 79, 23);
-
         jLabel2.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Catidad de entradas:");
+        jLabel2.setText("Cantidad de entradas:");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(310, 70, 230, 24);
+        jLabel2.setBounds(280, 60, 230, 22);
         getContentPane().add(jSpinner1);
-        jSpinner1.setBounds(470, 130, 50, 30);
+        jSpinner1.setBounds(450, 130, 50, 30);
 
         jLabel4.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Adultos");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(290, 130, 80, 24);
+        jLabel4.setBounds(280, 130, 130, 22);
 
         jLabel6.setFont(new java.awt.Font("Adobe Caslon Pro", 0, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Niño");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(290, 200, 40, 24);
+        jLabel6.setBounds(280, 200, 120, 22);
         getContentPane().add(jSpinner2);
-        jSpinner2.setBounds(470, 200, 50, 30);
+        jSpinner2.setBounds(450, 200, 50, 30);
 
         jLabel7.setFont(new java.awt.Font("Adobe Caslon Pro", 0, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Adulto Mayor");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(280, 270, 160, 24);
+        jLabel7.setBounds(280, 270, 160, 22);
         getContentPane().add(jSpinner3);
-        jSpinner3.setBounds(470, 270, 50, 30);
+        jSpinner3.setBounds(450, 260, 50, 30);
 
         jButton5.setText("Siguiente");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -114,7 +122,7 @@ public class HorarioyTiquetes extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(470, 350, 100, 23);
+        jButton5.setBounds(470, 350, 100, 27);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Asientos-Cine-Rojos.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -158,18 +166,10 @@ public class HorarioyTiquetes extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new HorarioyTiquetes().setVisible(true);
-            }
-        });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JComboBox<String> CBHorario;
     private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

@@ -50,6 +50,8 @@ public class Inicio extends javax.swing.JFrame {
         admin.agregarSalaPelicula(sala2D, "Mi vilano Favorito 3");
         admin.agregarSalaPelicula(sala3D, "Mi vilano Favorito 3");
         
+        
+        
     }
 
     /**
