@@ -29,81 +29,81 @@ public class Asientos extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
-        jButton16 = new javax.swing.JButton();
-        jButton17 = new javax.swing.JButton();
-        jButton18 = new javax.swing.JButton();
-        jButton19 = new javax.swing.JButton();
-        jButton20 = new javax.swing.JButton();
-        jButton21 = new javax.swing.JButton();
-        jButton22 = new javax.swing.JButton();
-        jButton23 = new javax.swing.JButton();
-        jButton24 = new javax.swing.JButton();
-        jButton25 = new javax.swing.JButton();
-        jButton26 = new javax.swing.JButton();
-        jButton27 = new javax.swing.JButton();
-        jButton28 = new javax.swing.JButton();
-        jButton29 = new javax.swing.JButton();
-        jButton30 = new javax.swing.JButton();
-        jButton31 = new javax.swing.JButton();
-        jButton32 = new javax.swing.JButton();
-        jButton33 = new javax.swing.JButton();
-        jButton34 = new javax.swing.JButton();
-        jButton35 = new javax.swing.JButton();
-        jButton36 = new javax.swing.JButton();
-        jButton37 = new javax.swing.JButton();
-        jButton38 = new javax.swing.JButton();
-        jButton39 = new javax.swing.JButton();
-        jButton40 = new javax.swing.JButton();
-        jButton41 = new javax.swing.JButton();
-        jButton42 = new javax.swing.JButton();
-        jButton43 = new javax.swing.JButton();
-        jButton44 = new javax.swing.JButton();
-        jButton45 = new javax.swing.JButton();
-        jButton46 = new javax.swing.JButton();
-        jButton47 = new javax.swing.JButton();
-        jButton48 = new javax.swing.JButton();
-        jButton49 = new javax.swing.JButton();
-        jButton50 = new javax.swing.JButton();
-        jButton51 = new javax.swing.JButton();
-        jButton52 = new javax.swing.JButton();
-        jButton53 = new javax.swing.JButton();
-        jButton54 = new javax.swing.JButton();
-        jButton55 = new javax.swing.JButton();
-        jButton56 = new javax.swing.JButton();
-        jButton57 = new javax.swing.JButton();
-        jButton58 = new javax.swing.JButton();
-        jButton59 = new javax.swing.JButton();
-        jButton60 = new javax.swing.JButton();
-        jButton61 = new javax.swing.JButton();
-        jButton62 = new javax.swing.JButton();
-        jButton63 = new javax.swing.JButton();
-        jButton64 = new javax.swing.JButton();
-        jButton65 = new javax.swing.JButton();
-        jButton66 = new javax.swing.JButton();
-        jButton67 = new javax.swing.JButton();
-        jButton68 = new javax.swing.JButton();
-        jButton69 = new javax.swing.JButton();
-        jButton70 = new javax.swing.JButton();
-        jButton71 = new javax.swing.JButton();
-        jButton72 = new javax.swing.JButton();
-        jButton73 = new javax.swing.JButton();
-        jButton74 = new javax.swing.JButton();
-        jButton75 = new javax.swing.JButton();
-        jButton76 = new javax.swing.JButton();
+        ASiento1 = new javax.swing.JButton();
+        Asiento62 = new javax.swing.JButton();
+        Asiento5 = new javax.swing.JButton();
+        Asiento63 = new javax.swing.JButton();
+        Asiento32 = new javax.swing.JButton();
+        Asiento47 = new javax.swing.JButton();
+        Asiento48 = new javax.swing.JButton();
+        Asiento64 = new javax.swing.JButton();
+        Asiento34 = new javax.swing.JButton();
+        Asiento53 = new javax.swing.JButton();
+        Asiento19 = new javax.swing.JButton();
+        Asiento61 = new javax.swing.JButton();
+        Asiento16 = new javax.swing.JButton();
+        Asiento31 = new javax.swing.JButton();
+        Asiento3 = new javax.swing.JButton();
+        Asiento4 = new javax.swing.JButton();
+        Asiento68 = new javax.swing.JButton();
+        Asiento49 = new javax.swing.JButton();
+        Asiento33 = new javax.swing.JButton();
+        Asiento9 = new javax.swing.JButton();
+        Asiento18 = new javax.swing.JButton();
+        Asiento17 = new javax.swing.JButton();
+        Asiento20 = new javax.swing.JButton();
+        Asiento35 = new javax.swing.JButton();
+        Asiento50 = new javax.swing.JButton();
+        Asiento65 = new javax.swing.JButton();
+        Asiento6 = new javax.swing.JButton();
+        Asiento21 = new javax.swing.JButton();
+        Asiento36 = new javax.swing.JButton();
+        Asiento51 = new javax.swing.JButton();
+        Asiento66 = new javax.swing.JButton();
+        Asiento7 = new javax.swing.JButton();
+        Asiento22 = new javax.swing.JButton();
+        Asiento37 = new javax.swing.JButton();
+        Asiento52 = new javax.swing.JButton();
+        Asiento67 = new javax.swing.JButton();
+        Asiento8 = new javax.swing.JButton();
+        Asiento23 = new javax.swing.JButton();
+        Asiento38 = new javax.swing.JButton();
+        Asiento24 = new javax.swing.JButton();
+        Asiento39 = new javax.swing.JButton();
+        Asiento54 = new javax.swing.JButton();
+        Asiento10 = new javax.swing.JButton();
+        Asiento25 = new javax.swing.JButton();
+        Asiento40 = new javax.swing.JButton();
+        Asiento46 = new javax.swing.JButton();
+        Asiento2 = new javax.swing.JButton();
+        Asiento55 = new javax.swing.JButton();
+        Asiento70 = new javax.swing.JButton();
+        Asiento11 = new javax.swing.JButton();
+        Asiento41 = new javax.swing.JButton();
+        Asiento56 = new javax.swing.JButton();
+        Asiento71 = new javax.swing.JButton();
+        Asiento12 = new javax.swing.JButton();
+        Asiento42 = new javax.swing.JButton();
+        Asiento57 = new javax.swing.JButton();
+        Asiento72 = new javax.swing.JButton();
+        Asiento13 = new javax.swing.JButton();
+        Asiento28 = new javax.swing.JButton();
+        Asiento43 = new javax.swing.JButton();
+        Asiento58 = new javax.swing.JButton();
+        Asiento73 = new javax.swing.JButton();
+        Asiento14 = new javax.swing.JButton();
+        Asiento15 = new javax.swing.JButton();
+        Asiento29 = new javax.swing.JButton();
+        Asiento30 = new javax.swing.JButton();
+        Asiento44 = new javax.swing.JButton();
+        Asiento45 = new javax.swing.JButton();
+        Asiento59 = new javax.swing.JButton();
+        Asiento60 = new javax.swing.JButton();
+        Asiento74 = new javax.swing.JButton();
+        Asiento75 = new javax.swing.JButton();
+        Asiento26 = new javax.swing.JButton();
+        Asiento27 = new javax.swing.JButton();
+        Asiento69 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -119,162 +119,337 @@ public class Asientos extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1);
         jButton1.setBounds(513, 370, 90, 23);
-        getContentPane().add(jButton2);
-        jButton2.setBounds(520, 230, 30, 30);
 
-        jButton3.setOpaque(false);
-        getContentPane().add(jButton3);
-        jButton3.setBounds(70, 80, 30, 30);
-        getContentPane().add(jButton4);
-        jButton4.setBounds(100, 80, 30, 30);
-        getContentPane().add(jButton5);
-        jButton5.setBounds(130, 80, 30, 30);
-        getContentPane().add(jButton6);
-        jButton6.setBounds(160, 80, 30, 30);
-        getContentPane().add(jButton7);
-        jButton7.setBounds(200, 80, 30, 30);
-        getContentPane().add(jButton8);
-        jButton8.setBounds(230, 80, 30, 30);
-        getContentPane().add(jButton9);
-        jButton9.setBounds(260, 80, 30, 30);
-        getContentPane().add(jButton10);
-        jButton10.setBounds(290, 80, 30, 30);
-        getContentPane().add(jButton11);
-        jButton11.setBounds(320, 80, 30, 30);
-        getContentPane().add(jButton12);
-        jButton12.setBounds(360, 80, 30, 30);
-        getContentPane().add(jButton13);
-        jButton13.setBounds(390, 80, 30, 30);
-        getContentPane().add(jButton14);
-        jButton14.setBounds(420, 80, 30, 30);
-        getContentPane().add(jButton15);
-        jButton15.setBounds(450, 80, 30, 30);
-        getContentPane().add(jButton16);
-        jButton16.setBounds(480, 80, 30, 30);
-        getContentPane().add(jButton17);
-        jButton17.setBounds(520, 80, 30, 30);
-        getContentPane().add(jButton18);
-        jButton18.setBounds(70, 120, 30, 30);
-        getContentPane().add(jButton19);
-        jButton19.setBounds(100, 120, 30, 30);
-        getContentPane().add(jButton20);
-        jButton20.setBounds(130, 120, 30, 30);
-        getContentPane().add(jButton21);
-        jButton21.setBounds(160, 120, 30, 30);
-        getContentPane().add(jButton22);
-        jButton22.setBounds(200, 120, 30, 30);
-        getContentPane().add(jButton23);
-        jButton23.setBounds(230, 120, 30, 30);
-        getContentPane().add(jButton24);
-        jButton24.setBounds(260, 120, 30, 30);
-        getContentPane().add(jButton25);
-        jButton25.setBounds(290, 120, 30, 30);
-        getContentPane().add(jButton26);
-        jButton26.setBounds(330, 120, 30, 30);
-        getContentPane().add(jButton27);
-        jButton27.setBounds(360, 120, 30, 30);
-        getContentPane().add(jButton28);
-        jButton28.setBounds(390, 120, 30, 30);
-        getContentPane().add(jButton29);
-        jButton29.setBounds(420, 120, 30, 30);
-        getContentPane().add(jButton30);
-        jButton30.setBounds(450, 120, 30, 30);
-        getContentPane().add(jButton31);
-        jButton31.setBounds(480, 120, 30, 30);
-        getContentPane().add(jButton32);
-        jButton32.setBounds(520, 120, 30, 30);
-        getContentPane().add(jButton33);
-        jButton33.setBounds(70, 160, 30, 30);
-        getContentPane().add(jButton34);
-        jButton34.setBounds(100, 160, 30, 30);
-        getContentPane().add(jButton35);
-        jButton35.setBounds(130, 160, 30, 30);
-        getContentPane().add(jButton36);
-        jButton36.setBounds(170, 160, 30, 30);
-        getContentPane().add(jButton37);
-        jButton37.setBounds(200, 160, 30, 30);
-        getContentPane().add(jButton38);
-        jButton38.setBounds(230, 160, 30, 30);
-        getContentPane().add(jButton39);
-        jButton39.setBounds(260, 160, 30, 30);
-        getContentPane().add(jButton40);
-        jButton40.setBounds(290, 160, 30, 30);
-        getContentPane().add(jButton41);
-        jButton41.setBounds(330, 160, 30, 30);
-        getContentPane().add(jButton42);
-        jButton42.setBounds(360, 160, 30, 30);
-        getContentPane().add(jButton43);
-        jButton43.setBounds(390, 160, 30, 30);
-        getContentPane().add(jButton44);
-        jButton44.setBounds(420, 160, 30, 30);
-        getContentPane().add(jButton45);
-        jButton45.setBounds(450, 160, 30, 30);
-        getContentPane().add(jButton46);
-        jButton46.setBounds(480, 160, 30, 30);
-        getContentPane().add(jButton47);
-        jButton47.setBounds(520, 160, 30, 30);
-        getContentPane().add(jButton48);
-        jButton48.setBounds(70, 190, 30, 30);
-        getContentPane().add(jButton49);
-        jButton49.setBounds(100, 190, 30, 30);
-        getContentPane().add(jButton50);
-        jButton50.setBounds(130, 190, 30, 30);
-        getContentPane().add(jButton51);
-        jButton51.setBounds(170, 190, 30, 30);
-        getContentPane().add(jButton52);
-        jButton52.setBounds(200, 190, 30, 30);
-        getContentPane().add(jButton53);
-        jButton53.setBounds(230, 190, 30, 30);
+        ASiento1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        ASiento1.setOpaque(false);
+        getContentPane().add(ASiento1);
+        ASiento1.setBounds(70, 80, 30, 30);
 
-        jButton54.setBorderPainted(false);
-        getContentPane().add(jButton54);
-        jButton54.setBounds(260, 190, 30, 30);
-        getContentPane().add(jButton55);
-        jButton55.setBounds(290, 190, 30, 30);
-        getContentPane().add(jButton56);
-        jButton56.setBounds(390, 190, 30, 30);
-        getContentPane().add(jButton57);
-        jButton57.setBounds(420, 190, 30, 30);
-        getContentPane().add(jButton58);
-        jButton58.setBounds(450, 190, 30, 30);
-        getContentPane().add(jButton59);
-        jButton59.setBounds(480, 190, 30, 30);
-        getContentPane().add(jButton60);
-        jButton60.setBounds(520, 190, 30, 30);
-        getContentPane().add(jButton61);
-        jButton61.setBounds(70, 230, 30, 30);
-        getContentPane().add(jButton62);
-        jButton62.setBounds(100, 230, 30, 30);
-        getContentPane().add(jButton63);
-        jButton63.setBounds(330, 190, 30, 30);
-        getContentPane().add(jButton64);
-        jButton64.setBounds(360, 190, 30, 30);
-        getContentPane().add(jButton65);
-        jButton65.setBounds(200, 230, 30, 30);
-        getContentPane().add(jButton66);
-        jButton66.setBounds(230, 230, 30, 30);
-        getContentPane().add(jButton67);
-        jButton67.setBounds(260, 230, 30, 30);
-        getContentPane().add(jButton68);
-        jButton68.setBounds(290, 230, 30, 30);
-        getContentPane().add(jButton69);
-        jButton69.setBounds(330, 230, 30, 30);
-        getContentPane().add(jButton70);
-        jButton70.setBounds(360, 230, 30, 30);
-        getContentPane().add(jButton71);
-        jButton71.setBounds(390, 230, 30, 30);
-        getContentPane().add(jButton72);
-        jButton72.setBounds(420, 230, 30, 30);
-        getContentPane().add(jButton73);
-        jButton73.setBounds(450, 230, 30, 30);
-        getContentPane().add(jButton74);
-        jButton74.setBounds(480, 230, 30, 30);
-        getContentPane().add(jButton75);
-        jButton75.setBounds(130, 230, 30, 30);
-        getContentPane().add(jButton76);
-        jButton76.setBounds(170, 230, 30, 30);
+        Asiento62.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento62);
+        Asiento62.setBounds(100, 240, 30, 30);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PANTALLA.jpg"))); // NOI18N
+        Asiento5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento5);
+        Asiento5.setBounds(190, 80, 30, 30);
+
+        Asiento63.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento63);
+        Asiento63.setBounds(130, 240, 30, 30);
+
+        Asiento32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento32);
+        Asiento32.setBounds(100, 160, 30, 30);
+
+        Asiento47.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento47);
+        Asiento47.setBounds(100, 200, 30, 30);
+
+        Asiento48.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento48);
+        Asiento48.setBounds(130, 200, 30, 30);
+
+        Asiento64.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento64);
+        Asiento64.setBounds(160, 240, 30, 30);
+
+        Asiento34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento34);
+        Asiento34.setBounds(160, 160, 30, 30);
+
+        Asiento53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento53);
+        Asiento53.setBounds(280, 200, 30, 30);
+
+        Asiento19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento19);
+        Asiento19.setBounds(160, 120, 30, 30);
+
+        Asiento61.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento61);
+        Asiento61.setBounds(70, 240, 30, 30);
+
+        Asiento16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento16);
+        Asiento16.setBounds(70, 120, 30, 30);
+
+        Asiento31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento31);
+        Asiento31.setBounds(70, 160, 30, 30);
+
+        Asiento3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento3);
+        Asiento3.setBounds(130, 80, 30, 30);
+
+        Asiento4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento4);
+        Asiento4.setBounds(160, 80, 30, 30);
+
+        Asiento68.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento68);
+        Asiento68.setBounds(280, 240, 30, 30);
+
+        Asiento49.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento49);
+        Asiento49.setBounds(160, 200, 30, 30);
+
+        Asiento33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento33);
+        Asiento33.setBounds(130, 160, 30, 30);
+
+        Asiento9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento9);
+        Asiento9.setBounds(310, 80, 30, 30);
+
+        Asiento18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento18);
+        Asiento18.setBounds(130, 120, 30, 30);
+
+        Asiento17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento17);
+        Asiento17.setBounds(100, 120, 30, 30);
+
+        Asiento20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento20);
+        Asiento20.setBounds(190, 120, 30, 30);
+
+        Asiento35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento35);
+        Asiento35.setBounds(190, 160, 30, 30);
+
+        Asiento50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento50);
+        Asiento50.setBounds(190, 200, 30, 30);
+
+        Asiento65.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento65);
+        Asiento65.setBounds(190, 240, 30, 30);
+
+        Asiento6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento6);
+        Asiento6.setBounds(220, 80, 30, 30);
+
+        Asiento21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento21);
+        Asiento21.setBounds(220, 120, 30, 30);
+
+        Asiento36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento36);
+        Asiento36.setBounds(220, 160, 30, 30);
+
+        Asiento51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento51);
+        Asiento51.setBounds(220, 200, 30, 30);
+
+        Asiento66.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento66);
+        Asiento66.setBounds(220, 240, 30, 30);
+
+        Asiento7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento7);
+        Asiento7.setBounds(250, 80, 30, 30);
+
+        Asiento22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento22);
+        Asiento22.setBounds(250, 120, 30, 30);
+
+        Asiento37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento37);
+        Asiento37.setBounds(250, 160, 30, 30);
+
+        Asiento52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento52);
+        Asiento52.setBounds(250, 200, 30, 30);
+
+        Asiento67.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento67);
+        Asiento67.setBounds(250, 240, 30, 30);
+
+        Asiento8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento8);
+        Asiento8.setBounds(280, 80, 30, 30);
+
+        Asiento23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento23);
+        Asiento23.setBounds(280, 120, 30, 30);
+
+        Asiento38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento38);
+        Asiento38.setBounds(280, 160, 30, 30);
+
+        Asiento24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento24);
+        Asiento24.setBounds(310, 120, 30, 30);
+
+        Asiento39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento39);
+        Asiento39.setBounds(310, 160, 30, 30);
+
+        Asiento54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento54);
+        Asiento54.setBounds(310, 200, 30, 30);
+
+        Asiento10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento10);
+        Asiento10.setBounds(340, 80, 30, 30);
+
+        Asiento25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento25);
+        Asiento25.setBounds(340, 120, 30, 30);
+
+        Asiento40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento40);
+        Asiento40.setBounds(340, 160, 30, 30);
+
+        Asiento46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento46);
+        Asiento46.setBounds(70, 200, 30, 30);
+
+        Asiento2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        getContentPane().add(Asiento2);
+        Asiento2.setBounds(100, 80, 30, 30);
+
+        Asiento55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        Asiento55.setOpaque(false);
+        getContentPane().add(Asiento55);
+        Asiento55.setBounds(340, 200, 30, 30);
+
+        Asiento70.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        Asiento70.setOpaque(false);
+        getContentPane().add(Asiento70);
+        Asiento70.setBounds(340, 240, 30, 30);
+
+        Asiento11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        Asiento11.setOpaque(false);
+        getContentPane().add(Asiento11);
+        Asiento11.setBounds(370, 80, 30, 30);
+
+        Asiento41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        Asiento41.setOpaque(false);
+        getContentPane().add(Asiento41);
+        Asiento41.setBounds(370, 160, 30, 30);
+
+        Asiento56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        Asiento56.setOpaque(false);
+        getContentPane().add(Asiento56);
+        Asiento56.setBounds(370, 200, 30, 30);
+
+        Asiento71.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        Asiento71.setOpaque(false);
+        getContentPane().add(Asiento71);
+        Asiento71.setBounds(370, 240, 30, 30);
+
+        Asiento12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        Asiento12.setOpaque(false);
+        getContentPane().add(Asiento12);
+        Asiento12.setBounds(400, 80, 30, 30);
+
+        Asiento42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        Asiento42.setOpaque(false);
+        getContentPane().add(Asiento42);
+        Asiento42.setBounds(400, 160, 30, 30);
+
+        Asiento57.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        Asiento57.setOpaque(false);
+        getContentPane().add(Asiento57);
+        Asiento57.setBounds(400, 200, 30, 30);
+
+        Asiento72.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        Asiento72.setOpaque(false);
+        getContentPane().add(Asiento72);
+        Asiento72.setBounds(400, 240, 30, 30);
+
+        Asiento13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        Asiento13.setOpaque(false);
+        getContentPane().add(Asiento13);
+        Asiento13.setBounds(430, 80, 30, 30);
+
+        Asiento28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        Asiento28.setOpaque(false);
+        getContentPane().add(Asiento28);
+        Asiento28.setBounds(430, 120, 30, 30);
+
+        Asiento43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        Asiento43.setOpaque(false);
+        getContentPane().add(Asiento43);
+        Asiento43.setBounds(430, 160, 30, 30);
+
+        Asiento58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        Asiento58.setOpaque(false);
+        getContentPane().add(Asiento58);
+        Asiento58.setBounds(430, 200, 30, 30);
+
+        Asiento73.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        Asiento73.setOpaque(false);
+        getContentPane().add(Asiento73);
+        Asiento73.setBounds(430, 240, 30, 30);
+
+        Asiento14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        Asiento14.setOpaque(false);
+        getContentPane().add(Asiento14);
+        Asiento14.setBounds(460, 80, 30, 30);
+
+        Asiento15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        Asiento15.setOpaque(false);
+        getContentPane().add(Asiento15);
+        Asiento15.setBounds(490, 80, 30, 30);
+
+        Asiento29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        Asiento29.setOpaque(false);
+        getContentPane().add(Asiento29);
+        Asiento29.setBounds(460, 120, 30, 30);
+
+        Asiento30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        Asiento30.setOpaque(false);
+        getContentPane().add(Asiento30);
+        Asiento30.setBounds(490, 120, 30, 30);
+
+        Asiento44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        Asiento44.setOpaque(false);
+        getContentPane().add(Asiento44);
+        Asiento44.setBounds(460, 160, 30, 30);
+
+        Asiento45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        Asiento45.setOpaque(false);
+        getContentPane().add(Asiento45);
+        Asiento45.setBounds(490, 160, 30, 30);
+
+        Asiento59.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        Asiento59.setOpaque(false);
+        getContentPane().add(Asiento59);
+        Asiento59.setBounds(460, 200, 30, 30);
+
+        Asiento60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        Asiento60.setOpaque(false);
+        getContentPane().add(Asiento60);
+        Asiento60.setBounds(490, 200, 30, 30);
+
+        Asiento74.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        Asiento74.setOpaque(false);
+        getContentPane().add(Asiento74);
+        Asiento74.setBounds(460, 240, 30, 30);
+
+        Asiento75.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        Asiento75.setOpaque(false);
+        getContentPane().add(Asiento75);
+        Asiento75.setBounds(490, 240, 30, 30);
+
+        Asiento26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        Asiento26.setOpaque(false);
+        getContentPane().add(Asiento26);
+        Asiento26.setBounds(370, 120, 30, 30);
+
+        Asiento27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        Asiento27.setOpaque(false);
+        getContentPane().add(Asiento27);
+        Asiento27.setBounds(400, 120, 30, 30);
+
+        Asiento69.setIcon(new javax.swing.ImageIcon(getClass().getResource("/asientoicono.jpg"))); // NOI18N
+        Asiento69.setOpaque(false);
+        getContentPane().add(Asiento69);
+        Asiento69.setBounds(310, 240, 30, 30);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PANTALLA1.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(70, 70, 490, 290);
 
@@ -334,82 +509,82 @@ public class Asientos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ASiento1;
+    private javax.swing.JButton Asiento10;
+    private javax.swing.JButton Asiento11;
+    private javax.swing.JButton Asiento12;
+    private javax.swing.JButton Asiento13;
+    private javax.swing.JButton Asiento14;
+    private javax.swing.JButton Asiento15;
+    private javax.swing.JButton Asiento16;
+    private javax.swing.JButton Asiento17;
+    private javax.swing.JButton Asiento18;
+    private javax.swing.JButton Asiento19;
+    private javax.swing.JButton Asiento2;
+    private javax.swing.JButton Asiento20;
+    private javax.swing.JButton Asiento21;
+    private javax.swing.JButton Asiento22;
+    private javax.swing.JButton Asiento23;
+    private javax.swing.JButton Asiento24;
+    private javax.swing.JButton Asiento25;
+    private javax.swing.JButton Asiento26;
+    private javax.swing.JButton Asiento27;
+    private javax.swing.JButton Asiento28;
+    private javax.swing.JButton Asiento29;
+    private javax.swing.JButton Asiento3;
+    private javax.swing.JButton Asiento30;
+    private javax.swing.JButton Asiento31;
+    private javax.swing.JButton Asiento32;
+    private javax.swing.JButton Asiento33;
+    private javax.swing.JButton Asiento34;
+    private javax.swing.JButton Asiento35;
+    private javax.swing.JButton Asiento36;
+    private javax.swing.JButton Asiento37;
+    private javax.swing.JButton Asiento38;
+    private javax.swing.JButton Asiento39;
+    private javax.swing.JButton Asiento4;
+    private javax.swing.JButton Asiento40;
+    private javax.swing.JButton Asiento41;
+    private javax.swing.JButton Asiento42;
+    private javax.swing.JButton Asiento43;
+    private javax.swing.JButton Asiento44;
+    private javax.swing.JButton Asiento45;
+    private javax.swing.JButton Asiento46;
+    private javax.swing.JButton Asiento47;
+    private javax.swing.JButton Asiento48;
+    private javax.swing.JButton Asiento49;
+    private javax.swing.JButton Asiento5;
+    private javax.swing.JButton Asiento50;
+    private javax.swing.JButton Asiento51;
+    private javax.swing.JButton Asiento52;
+    private javax.swing.JButton Asiento53;
+    private javax.swing.JButton Asiento54;
+    private javax.swing.JButton Asiento55;
+    private javax.swing.JButton Asiento56;
+    private javax.swing.JButton Asiento57;
+    private javax.swing.JButton Asiento58;
+    private javax.swing.JButton Asiento59;
+    private javax.swing.JButton Asiento6;
+    private javax.swing.JButton Asiento60;
+    private javax.swing.JButton Asiento61;
+    private javax.swing.JButton Asiento62;
+    private javax.swing.JButton Asiento63;
+    private javax.swing.JButton Asiento64;
+    private javax.swing.JButton Asiento65;
+    private javax.swing.JButton Asiento66;
+    private javax.swing.JButton Asiento67;
+    private javax.swing.JButton Asiento68;
+    private javax.swing.JButton Asiento69;
+    private javax.swing.JButton Asiento7;
+    private javax.swing.JButton Asiento70;
+    private javax.swing.JButton Asiento71;
+    private javax.swing.JButton Asiento72;
+    private javax.swing.JButton Asiento73;
+    private javax.swing.JButton Asiento74;
+    private javax.swing.JButton Asiento75;
+    private javax.swing.JButton Asiento8;
+    private javax.swing.JButton Asiento9;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
-    private javax.swing.JButton jButton19;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton20;
-    private javax.swing.JButton jButton21;
-    private javax.swing.JButton jButton22;
-    private javax.swing.JButton jButton23;
-    private javax.swing.JButton jButton24;
-    private javax.swing.JButton jButton25;
-    private javax.swing.JButton jButton26;
-    private javax.swing.JButton jButton27;
-    private javax.swing.JButton jButton28;
-    private javax.swing.JButton jButton29;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton30;
-    private javax.swing.JButton jButton31;
-    private javax.swing.JButton jButton32;
-    private javax.swing.JButton jButton33;
-    private javax.swing.JButton jButton34;
-    private javax.swing.JButton jButton35;
-    private javax.swing.JButton jButton36;
-    private javax.swing.JButton jButton37;
-    private javax.swing.JButton jButton38;
-    private javax.swing.JButton jButton39;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton40;
-    private javax.swing.JButton jButton41;
-    private javax.swing.JButton jButton42;
-    private javax.swing.JButton jButton43;
-    private javax.swing.JButton jButton44;
-    private javax.swing.JButton jButton45;
-    private javax.swing.JButton jButton46;
-    private javax.swing.JButton jButton47;
-    private javax.swing.JButton jButton48;
-    private javax.swing.JButton jButton49;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton50;
-    private javax.swing.JButton jButton51;
-    private javax.swing.JButton jButton52;
-    private javax.swing.JButton jButton53;
-    private javax.swing.JButton jButton54;
-    private javax.swing.JButton jButton55;
-    private javax.swing.JButton jButton56;
-    private javax.swing.JButton jButton57;
-    private javax.swing.JButton jButton58;
-    private javax.swing.JButton jButton59;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton60;
-    private javax.swing.JButton jButton61;
-    private javax.swing.JButton jButton62;
-    private javax.swing.JButton jButton63;
-    private javax.swing.JButton jButton64;
-    private javax.swing.JButton jButton65;
-    private javax.swing.JButton jButton66;
-    private javax.swing.JButton jButton67;
-    private javax.swing.JButton jButton68;
-    private javax.swing.JButton jButton69;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton70;
-    private javax.swing.JButton jButton71;
-    private javax.swing.JButton jButton72;
-    private javax.swing.JButton jButton73;
-    private javax.swing.JButton jButton74;
-    private javax.swing.JButton jButton75;
-    private javax.swing.JButton jButton76;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
