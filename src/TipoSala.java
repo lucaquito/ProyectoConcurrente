@@ -14,7 +14,8 @@ public class TipoSala extends javax.swing.JFrame {
     public TipoSala(Admin admin, int peli) {
         initComponents();
         this.admin = admin;
-        this.peli = admin.getPeliculas().get(peli);
+        admin.setPeli(peli);
+        this.peli = admin.getPeliculas().get(admin.getPeli());
         construirComboBox();
         this.setSize(640, 473);
         this.setResizable(false);
@@ -116,8 +117,8 @@ public class TipoSala extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         int salaI = CBTipoSala.getSelectedIndex();
-        Sala sala = peli.getSalas().get(salaI);
-        HorarioyTiquetes horarioytiquetes = new HorarioyTiquetes(admin,sala);
+        admin.setSala(salaI);
+        HorarioyTiquetes horarioytiquetes = new HorarioyTiquetes(admin);
         this.setVisible(false);
         horarioytiquetes.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed

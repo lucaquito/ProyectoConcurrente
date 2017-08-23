@@ -9,15 +9,20 @@ import javax.swing.JOptionPane;
  */
 public class Asientos extends javax.swing.JFrame {
 
-   private Admin admin;
-   private int cantidadAsientos;
-   private int contAsientosEscogidos;
-   
+    private Admin admin;
+    private int cantidadAsientos;
+    private int contAsientosEscogidos;
+    private int[][] asientos;
+
     public Asientos(Admin admin) {
         initComponents();
         this.admin = admin;
         this.cantidadAsientos = admin.obtenerEntradasTotales();
+        this.asientos = admin.getPeliculas().get(admin.getPeli()).getSalas().get(admin.getSala()).getListaHorarios().get(admin.getTanda()).getAsientos();
         this.setSize(633, 430);
+        this.asientos[0][0] = 1;
+        this.asientos[0][1] = 1;
+        //JOptionPane.showMessageDialog(null, asientos.length);
         this.setResizable(false);
         generarAsientos();
     }
@@ -26,41 +31,71 @@ public class Asientos extends javax.swing.JFrame {
 
         int contX = 10;
         int contY = 10;
-        contAsientosEscogidos=0;
+        int cont=1;
+        contAsientosEscogidos = 0;
+        JButton b = new JButton("");
 
-        for (int i = 0; i < 75; ++i) {
-            JButton b = new JButton("");
-            b.setLocation(contX, contY);
-            b.setSize(30, 30);
-            b.setIcon(new ImageIcon(getClass().getResource("Otras/asientoicono.jpg")));
+        for (int i = 0; i < asientos.length; i++) {
 
-            b.addActionListener(new java.awt.event.ActionListener() {
-                public void actionPerformed(java.awt.event.ActionEvent e) {
-                    
-                    if(contAsientosEscogidos<cantidadAsientos){
-                       JButton boton = (JButton) e.getSource();
-                       boton.setIcon(new ImageIcon(getClass().getResource("Otras/asientoiconorojo.jpg")));
-                       contAsientosEscogidos++;
-                    }else{
-                    JOptionPane.showMessageDialog(null, "No puede comprar mas asientos de los escogidos");
-                    }
-                    
+            for (int j = 0; j < asientos[i].length; j++) {
+
+                if (asientos[i][j] == 0) {
+
+                    b = new JButton("");
+                    b.setLocation(contX, contY);
+                    b.setSize(30, 30);
+                    b.setName(cont+"");
+                    b.setIcon(new ImageIcon(getClass().getResource("Otras/asientoicono.jpg")));
+
+                    b.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent e) {
+
+                            if (contAsientosEscogidos < cantidadAsientos) {
+                                JButton boton = (JButton) e.getSource();
+                                boton.setIcon(new ImageIcon(getClass().getResource("Otras/asientoiconorojo.jpg")));
+                                //asientos[i][j] = 1;
+                               //String nombre = b.getName();
+                               //admin.getAsientosSeleccionados().add(b.getName());
+                                contAsientosEscogidos++;
+                            } else {
+                                JOptionPane.showMessageDialog(null, "No puede comprar mas asientos de los escogidos");
+                            }
+                        }
+                    });
+
+                } else if (asientos[i][j] == 1) {
+                    b = new JButton("");
+                    b.setLocation(contX, contY);
+                    b.setSize(30, 30);
+                    b.setIcon(new ImageIcon(getClass().getResource("Otras/asientoiconorojo.jpg")));
+                    b.setName(cont+"");
+
                 }
-            });
 
-            jPanel1.add(b);
+                jPanel1.add(b);
 
-            if (contX == 430) {
-                contX = 10;
-                contY += 40;
-            } else {
-                contX += 30;
+                if (contX == 430) {
+                    contX = 10;
+                    contY += 40;
+                } else {
+                    contX += 30;
+                }
+                
+                cont++;
+
             }
 
         }
+
         jPanel1.repaint();
         repaint();
 
+    }
+    
+    public void actualizaAsientos(){
+    
+        admin.getPeliculas().get(admin.getPeli()).getSalas().get(admin.getSala()).getListaHorarios().get(admin.getTanda()).getAsientos();
+    
     }
 
     /**
@@ -115,7 +150,7 @@ public class Asientos extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-        VentanaFactura ventanafactura = new VentanaFactura();
+        VentanaFactura ventanafactura = new VentanaFactura(admin);
         this.setVisible(false);
         ventanafactura.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed

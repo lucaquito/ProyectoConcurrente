@@ -9,14 +9,30 @@
  * @author luis
  */
 public class VentanaFactura extends javax.swing.JFrame {
-
-    /**
-     * Creates new form VentanaFactura
-     */
-    public VentanaFactura() {
+    
+    private Admin admin;
+    private Pelicula peli;    
+    
+    public VentanaFactura(Admin admin) {
         initComponents();
+        this.admin = admin;
+        this.peli = admin.getPeliculas().get(admin.getPeli());
         this.setSize(721, 460);
         this.setResizable(false);
+        modificarTexto();
+        FechaHora Hilo = new FechaHora(lbFecha,lbHora);
+        Hilo.start();
+        
+    }
+    
+    public void modificarTexto() {
+        
+        lbPelicula.setText(peli.getNombre());
+        lbHorario.setText(peli.getSalas().get(admin.getSala()).getListaHorarios().get(admin.getTanda()).getNombre());
+        lbEntradas.setText(admin.obtenerEntradasTotales()+"");
+        lbTipoSala.setText(peli.getSalas().get(admin.getSala()).getNombreSala());
+        lbButaca.setText(admin.obtenerButacas());
+        
     }
 
     /**
@@ -29,17 +45,19 @@ public class VentanaFactura extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
+        lbFecha = new javax.swing.JLabel();
+        lbHora = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        lbPelicula = new javax.swing.JLabel();
+        lbHorario = new javax.swing.JLabel();
+        lbEntradas = new javax.swing.JLabel();
+        lbTipoSala = new javax.swing.JLabel();
+        lbButaca = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -52,7 +70,15 @@ public class VentanaFactura extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(630, 30, 35, 27);
+        jButton1.setBounds(605, 30, 60, 27);
+
+        lbFecha.setText("jLabel6");
+        getContentPane().add(lbFecha);
+        lbFecha.setBounds(40, 290, 110, 20);
+
+        lbHora.setText("jLabel6");
+        getContentPane().add(lbHora);
+        lbHora.setBounds(40, 267, 110, 20);
 
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel11.setText("978967569467458");
@@ -72,42 +98,42 @@ public class VentanaFactura extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel3.setText("Cantidad de entradas");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(190, 210, 190, 17);
+        jLabel3.setBounds(190, 220, 190, 17);
 
         jLabel4.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel4.setText("Tipo de sala");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(190, 240, 100, 30);
+        jLabel4.setBounds(190, 260, 170, 22);
 
         jLabel5.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel5.setText("Numero de butaca");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(190, 280, 170, 22);
+        jLabel5.setBounds(190, 300, 170, 22);
 
-        jLabel6.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel6.setText("jLabel6");
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(390, 120, 150, 30);
+        lbPelicula.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lbPelicula.setText("jLabel6");
+        getContentPane().add(lbPelicula);
+        lbPelicula.setBounds(390, 120, 150, 30);
 
-        jLabel7.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel7.setText("jLabel7");
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(390, 180, 150, 22);
+        lbHorario.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lbHorario.setText("jLabel7");
+        getContentPane().add(lbHorario);
+        lbHorario.setBounds(390, 180, 150, 22);
 
-        jLabel8.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel8.setText("jLabel8");
-        getContentPane().add(jLabel8);
-        jLabel8.setBounds(390, 210, 150, 22);
+        lbEntradas.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lbEntradas.setText("jLabel8");
+        getContentPane().add(lbEntradas);
+        lbEntradas.setBounds(390, 220, 150, 20);
 
-        jLabel9.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel9.setText("jLabel9");
-        getContentPane().add(jLabel9);
-        jLabel9.setBounds(390, 240, 150, 22);
+        lbTipoSala.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lbTipoSala.setText("jLabel9");
+        getContentPane().add(lbTipoSala);
+        lbTipoSala.setBounds(390, 260, 150, 22);
 
-        jLabel10.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel10.setText("jLabel10");
-        getContentPane().add(jLabel10);
-        jLabel10.setBounds(390, 280, 150, 22);
+        lbButaca.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lbButaca.setText("jLabel10");
+        getContentPane().add(lbButaca);
+        lbButaca.setBounds(390, 300, 150, 22);
 
         jLabel12.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Otras/82a3255f-dc5a-4dd6-8ea1-eb4380ffa54f.jpg"))); // NOI18N
@@ -149,27 +175,23 @@ public class VentanaFactura extends javax.swing.JFrame {
         }
         //</editor-fold>
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new VentanaFactura().setVisible(true);
-            }
-        });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel lbButaca;
+    private javax.swing.JLabel lbEntradas;
+    private javax.swing.JLabel lbFecha;
+    private javax.swing.JLabel lbHora;
+    private javax.swing.JLabel lbHorario;
+    private javax.swing.JLabel lbPelicula;
+    private javax.swing.JLabel lbTipoSala;
     // End of variables declaration//GEN-END:variables
 }

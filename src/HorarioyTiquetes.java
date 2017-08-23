@@ -11,10 +11,10 @@ public class HorarioyTiquetes extends javax.swing.JFrame {
     private Admin admin;
     private Sala sala;
 
-    public HorarioyTiquetes(Admin admin, Sala sala) {
+    public HorarioyTiquetes(Admin admin) {
         initComponents();
         this.admin = admin;
-        this.sala = sala;
+        this.sala = admin.getPeliculas().get(admin.getPeli()).getSalas().get(admin.getSala());
         ((SpinnerNumberModel) jSpinner1.getModel()).setMinimum(0);
         ((SpinnerNumberModel) jSpinner2.getModel()).setMinimum(0);
         ((SpinnerNumberModel) jSpinner3.getModel()).setMinimum(0);
@@ -130,7 +130,7 @@ public class HorarioyTiquetes extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
 
-        //    CBHorario.getSelectedIndex();
+        int horario = CBHorario.getSelectedIndex();
         int cantidadAdultos = (Integer) jSpinner1.getValue();
         int cantidadNinos = (Integer) jSpinner2.getValue();
         int cantidadAdultoMayor = (Integer) jSpinner3.getValue();
@@ -140,6 +140,7 @@ public class HorarioyTiquetes extends javax.swing.JFrame {
             admin.setCantAdultos(cantidadAdultos);
             admin.setCantNinos(cantidadNinos);
             admin.setCantAdultoMayor(cantidadAdultoMayor);
+            admin.setTanda(horario);
             Asientos asientos = new Asientos(admin);
             this.setVisible(false);
             asientos.setVisible(true);

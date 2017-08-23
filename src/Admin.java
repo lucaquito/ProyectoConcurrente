@@ -8,12 +8,48 @@ import javax.swing.ImageIcon;
  *
  * @author luis
  */
-public class Admin implements Serializable{
+public class Admin implements Serializable {
 
     private List<Pelicula> peliculas;
     private int cantAdultos = 0;
     private int cantNinos = 0;
     private int cantAdultoMayor = 0;
+    private int peli;
+    private int sala;
+    private int tanda;
+    private List<Integer> asientosSeleccionados;
+
+    public List<Integer> getAsientosSeleccionados() {
+        return asientosSeleccionados;
+    }
+
+    public void setAsientosSeleccionados(List<Integer> asientosSeleccionados) {
+        this.asientosSeleccionados = asientosSeleccionados;
+    }
+
+    public int getTanda() {
+        return tanda;
+    }
+
+    public void setTanda(int tanda) {
+        this.tanda = tanda;
+    }
+
+    public int getPeli() {
+        return peli;
+    }
+
+    public void setPeli(int peli) {
+        this.peli = peli;
+    }
+
+    public int getSala() {
+        return sala;
+    }
+
+    public void setSala(int sala) {
+        this.sala = sala;
+    }
 
     public int getCantAdultos() {
         return cantAdultos;
@@ -50,7 +86,21 @@ public class Admin implements Serializable{
     public Admin() {
 
         this.peliculas = new LinkedList();
+        this.peli = 0;
+        this.sala = 0;
+        this.tanda = 0;
+        this.asientosSeleccionados = new LinkedList<Integer>();
 
+    }
+    
+    public String obtenerButacas(){
+    
+        String salida = "";
+        for (int asiento : asientosSeleccionados) {
+            salida += asiento +"/";
+        }
+        
+      return salida;
     }
 
     public void agregarPelicula(String nombre, String sinopsis, String duracion, int censura, String photo) {
@@ -94,24 +144,24 @@ public class Admin implements Serializable{
         return false;
 
     }
-    
-    public String imprimirPeliculas(){
-    
+
+    public String imprimirPeliculas() {
+
         int tamano = peliculas.size();
         String salida = "";
-        
+
         for (int i = 0; i < tamano; i++) {
-            
+
             Pelicula peli = peliculas.get(i);
             salida += peli.getNombre() + "\n";
-         
+
         }
-    
+
         return salida;
-    
+
     }
-    
-    public int obtenerEntradasTotales(){
-        return cantAdultoMayor+cantAdultos+cantNinos;
+
+    public int obtenerEntradasTotales() {
+        return cantAdultoMayor + cantAdultos + cantNinos;
     }
 }
