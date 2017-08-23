@@ -110,5 +110,8 @@ public class Admin implements Serializable{
         return salida;
     
     }
-
+    
+    public int obtenerEntradasTotales(){
+        return cantAdultoMayor+cantAdultos+cantNinos;
+    }
 }

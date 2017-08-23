@@ -140,7 +140,7 @@ public class HorarioyTiquetes extends javax.swing.JFrame {
             admin.setCantAdultos(cantidadAdultos);
             admin.setCantNinos(cantidadNinos);
             admin.setCantAdultoMayor(cantidadAdultoMayor);
-            Asientos asientos = new Asientos();
+            Asientos asientos = new Asientos(admin);
             this.setVisible(false);
             asientos.setVisible(true);
 
