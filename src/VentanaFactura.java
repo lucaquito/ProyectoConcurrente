@@ -1,18 +1,20 @@
+
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author luis
  */
 public class VentanaFactura extends javax.swing.JFrame {
-    
+
     private Admin admin;
-    private Pelicula peli;    
-    
+    private Pelicula peli;
+
     public VentanaFactura(Admin admin) {
         initComponents();
         this.admin = admin;
@@ -20,31 +22,47 @@ public class VentanaFactura extends javax.swing.JFrame {
         this.setSize(721, 460);
         this.setResizable(false);
         modificarTexto();
-        FechaHora Hilo = new FechaHora(lbFecha,lbHora);
+        FechaHora Hilo = new FechaHora(lbFecha, lbHora);
         Hilo.start();
-        
+        enviarServer();
+
     }
-    
+
     public void modificarTexto() {
-        
+
         lbPelicula.setText(peli.getNombre());
         lbHorario.setText(peli.getSalas().get(admin.getSala()).getListaHorarios().get(admin.getTanda()).getNombre());
         lbTotal.setText(calcularTotal());
         lbTipoSala.setText(peli.getSalas().get(admin.getSala()).getNombreSala());
         lbButaca.setText(admin.obtenerButacas());
-        
+
     }
-    
-    public String calcularTotal(){
+
+    public void enviarServer() {
+
+        String nombre = admin.getServer();
+        int puerto = admin.getPuerto();
+
+        Client cliente = new Client(nombre, puerto);
         
+        admin.resetearValores();
+
+        cliente.enviarAdmin(admin);
+
+        JOptionPane.showMessageDialog(null, "Se envio el admin");
+
+    }
+
+    public String calcularTotal() {
+
         Double cantidadAdulto = admin.getPeliculas().get(admin.getPeli()).getSalas().get(admin.getSala()).getPrecioAdulto() * admin.getCantAdultos();
-        Double cantidadAdultoMayor = admin.getPeliculas().get(admin.getPeli()).getSalas().get(admin.getSala()).getPrecioAdultoMayor()* admin.getCantAdultoMayor();
-        Double cantidadNino = admin.getPeliculas().get(admin.getPeli()).getSalas().get(admin.getSala()).getPrecioNino()* admin.getCantNinos();
-        
-        Double total = cantidadAdulto+cantidadAdultoMayor+cantidadNino;
-    
-        return total +"";
-        
+        Double cantidadAdultoMayor = admin.getPeliculas().get(admin.getPeli()).getSalas().get(admin.getSala()).getPrecioAdultoMayor() * admin.getCantAdultoMayor();
+        Double cantidadNino = admin.getPeliculas().get(admin.getPeli()).getSalas().get(admin.getSala()).getPrecioNino() * admin.getCantNinos();
+
+        Double total = cantidadAdulto + cantidadAdultoMayor + cantidadNino;
+
+        return total + "";
+
     }
 
     /**
@@ -57,6 +75,7 @@ public class VentanaFactura extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         lbFecha = new javax.swing.JLabel();
         lbHora = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
@@ -83,6 +102,15 @@ public class VentanaFactura extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1);
         jButton1.setBounds(605, 30, 60, 27);
+
+        jButton2.setText("jButton2");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2);
+        jButton2.setBounds(520, 30, 57, 27);
 
         lbFecha.setText("jLabel6");
         getContentPane().add(lbFecha);
@@ -160,6 +188,11 @@ public class VentanaFactura extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+
+
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -191,6 +224,7 @@ public class VentanaFactura extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;

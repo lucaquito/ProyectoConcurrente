@@ -2,11 +2,9 @@
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.net.ConnectException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketException;
-import javax.swing.JOptionPane;
 
 public class Server {
 
@@ -22,7 +20,7 @@ public class Server {
     public Server(Admin admin) {
         this.admin = admin;
         this.puerto = 223;
-        this.nombreServidor="";
+        this.nombreServidor = "";
     }
 
     public void communicate() throws ClassNotFoundException {
@@ -32,9 +30,15 @@ public class Server {
             System.out.println("Conectado");
 
             outputStream = new ObjectOutputStream(socket.getOutputStream());
-            
+
             System.out.println("Enviando administrador");
             outputStream.writeObject(admin);
+//            inStream = new ObjectInputStream(socket.getInputStream());
+//            this.admin = (Admin) inStream.readObject();
+//            System.out.println("Recibiendo Admin" + admin);
+//            inStream.close();
+//            outputStream.close();
+
             socket.close();
             serverSocket.close();
 
@@ -42,9 +46,37 @@ public class Server {
             System.err.println("Error de socket");
         } catch (IOException e) {
             e.printStackTrace();
+        } catch (Exception e) {
+            System.err.println("Error");
         }
     }
-    
+
+    public void recibir() {
+
+        try {
+            serverSocket = new ServerSocket(4445);
+            socket = serverSocket.accept();
+            System.out.println("Conectado");
+
+            inStream = new ObjectInputStream(socket.getInputStream());
+            this.admin = (Admin) inStream.readObject();
+
+            System.out.println("Recibiendo administrador");
+            inStream.close();
+
+            socket.close();
+            serverSocket.close();
+
+        } catch (SocketException se) {
+            System.err.println("Error de socket");
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            System.err.println("Error");
+        }
+
+    }
+
 //    public Admin recibirAdmin() {
 ////
 ////        try {
@@ -75,5 +107,4 @@ public class Server {
 ////        return null;
 //
 //    }
-
 }

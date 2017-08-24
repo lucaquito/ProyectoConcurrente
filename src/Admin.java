@@ -18,6 +18,36 @@ public class Admin implements Serializable {
     private int sala;
     private int tanda;
     private List<String> asientosSeleccionados;
+    private String server;
+    private int puerto;
+
+    public String getServer() {
+        return server;
+    }
+    
+    public void resetearValores(){
+    
+        this.cantAdultoMayor =0;
+        this.cantAdultos=0;
+        this.cantNinos=0;
+        this.peli=0;
+        this.sala=0;
+        this.tanda=0;
+        this.asientosSeleccionados.removeAll(peliculas);
+        
+    }
+
+    public void setServer(String server) {
+        this.server = server;
+    }
+
+    public int getPuerto() {
+        return puerto;
+    }
+
+    public void setPuerto(int puerto) {
+        this.puerto = puerto;
+    }
 
     public List<String> getAsientosSeleccionados() {
         return asientosSeleccionados;
@@ -92,15 +122,15 @@ public class Admin implements Serializable {
         this.asientosSeleccionados = new LinkedList<String>();
 
     }
-    
-    public String obtenerButacas(){
-    
+
+    public String obtenerButacas() {
+
         String salida = "";
         for (String asiento : asientosSeleccionados) {
-            salida += asiento +"/";
+            salida += asiento + "/";
         }
-        
-      return salida;
+
+        return salida;
     }
 
     public void agregarPelicula(String nombre, String sinopsis, String duracion, int censura, String photo) {

@@ -5,7 +5,6 @@ import java.io.ObjectOutputStream;
 import java.net.ConnectException;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.net.SocketException;
 import javax.swing.JOptionPane;
 
 public class Client {
@@ -24,7 +23,7 @@ public class Client {
 
     }
 
-    public Admin recibirAdmin() {
+    public Admin recibirAdmin() throws IOException {
 
         try {
             while (!isConnected) {
@@ -35,46 +34,48 @@ public class Client {
 
                 inputStream = new ObjectInputStream(socket.getInputStream());
                 Admin admin = (Admin) inputStream.readObject();
-                
+
+                socket.close();
+                inputStream.close();
+
                 return admin;
 
                 //outputStream = new ObjectOutputStream(socket.getOutputStream());
                 //            Student student = new Student(1, "Bijoy");
                 //            System.out.println("Object to be written = " + student);
                 //            outputStream.writeObject(student);
-
             }
 
         } catch (ConnectException e) {
             JOptionPane.showMessageDialog(null, "Error al conectarse al servidor");
+            socket.close();
+            inputStream.close();
         } catch (Exception e) {
+            socket.close();
+            inputStream.close();
             JOptionPane.showMessageDialog(null, "Error desconocido");
         }
-        
+
         return null;
 
     }
-    
-    public void enviarAdmin(Admin admin){
-        
+
+    public void enviarAdmin(Admin admin) {
+
         try {
-            serverSocket = new ServerSocket(4445);
-            socket = serverSocket.accept();
-            System.out.println("Conectado");
+            socket = new Socket(nombreServidor, puerto);
+            System.out.println("Se conectó al servidor");
 
             outputStream = new ObjectOutputStream(socket.getOutputStream());
-            
-            System.out.println("Enviando administrador");
             outputStream.writeObject(admin);
-            socket.close();
-            serverSocket.close();
 
-        } catch (SocketException se) {
-            System.err.println("Error de socket");
-        } catch (IOException e) {
-            e.printStackTrace();
+            outputStream.close();
+            socket.close();
+
+        } catch (Exception e) {
+            System.out.println("Ocurrio un problema");
         }
-    
+
     }
 
 }

@@ -8,22 +8,22 @@ import javax.swing.JOptionPane;
  * @author luis
  */
 public class Asientos extends javax.swing.JFrame {
-
+    
     private Admin admin;
     private int cantidadAsientos;
     private int contAsientosEscogidos;
     private int[][] asientos;
     private int contI;
     private int contJ;
-
+    
     public int[][] getAsientos() {
         return asientos;
     }
-
+    
     public void setAsientos(int[][] asientos) {
         this.asientos = asientos;
     }
-
+    
     public Asientos(Admin admin) {
         initComponents();
         this.admin = admin;
@@ -37,102 +37,96 @@ public class Asientos extends javax.swing.JFrame {
         generarAsientos();
         jButton1.setEnabled(false);
     }
-
+    
     public void generarAsientos() {
-
+        
         int contX = 10;
         int contY = 10;
         int cont = 1;
         contAsientosEscogidos = 0;
         JButton boton = new JButton("");
-
+        
         for (int i = 0; i < asientos.length; i++) {
-
+            
             for (int j = 0; j < asientos[i].length; j++) {
-
+                
                 contI = i;
                 contJ = j;
-
+                
                 if (asientos[i][j] == 0) {
-
-                    boton = new JButton("");
+                    
+                    boton = new Asiento(i,j);
                     boton.setLocation(contX, contY);
                     boton.setSize(30, 30);
                     boton.setName(cont + "");
                     boton.setIcon(new ImageIcon(getClass().getResource("Otras/asientoicono.jpg")));
-
+                    
                     boton.addActionListener(new java.awt.event.ActionListener() {
                         private boolean seleccionado = false;
-
+                        
                         public void actionPerformed(java.awt.event.ActionEvent e) {
-
-                            JButton boton = (JButton) e.getSource();
+                            
+                            Asiento boton = (Asiento) e.getSource();
                             // Cuando se le da click y desactiva el boton
                             if (seleccionado == true) {
-                                System.out.println("Se desactivo el boton: "+boton.getName());
+                                System.out.println("Se desactivo el boton: " + boton.getName());
                                 boton.setIcon(new ImageIcon(getClass().getResource("Otras/asientoicono.jpg")));
                                 seleccionado = false;
                                 contAsientosEscogidos--;
-                                asientos[contI][contJ] = 0;
+                                asientos[boton.getFila()][boton.getColumna()] = 0;
                                 admin.getAsientosSeleccionados().remove(boton.getName());
                                 // Cuando se activa el boton
                             } else {
                                 seleccionado = true;
-                                System.out.println("Se activo el boton: "+boton.getName());
+                                System.out.println("Se activo el boton: " + boton.getName());
                                 if (contAsientosEscogidos < cantidadAsientos) {
-
+                                    
                                     boton.setIcon(new ImageIcon(getClass().getResource("Otras/asientoiconorojo.jpg")));
-
-                                    asientos[contI][contJ] = 1;
-
+                                    
+                                    asientos[boton.getFila()][boton.getColumna()] = 1;
+                                    
                                     admin.getAsientosSeleccionados().add(boton.getName());
                                     contAsientosEscogidos++;
                                 } else {
                                     JOptionPane.showMessageDialog(null, "No puede comprar mas asientos de los escogidos");
                                 }
                             }
-
+                            
                             if (contAsientosEscogidos == cantidadAsientos) {
                                 jButton1.setEnabled(true);
-                            }else{
+                            } else {
                                 jButton1.setEnabled(false);
                             }
                         }
                     });
-
+                    
                 } else if (asientos[i][j] == 1) {
                     boton = new JButton("");
                     boton.setLocation(contX, contY);
                     boton.setSize(30, 30);
                     boton.setIcon(new ImageIcon(getClass().getResource("Otras/asientoiconorojo.jpg")));
                     boton.setName(cont + "");
-
+                    
                 }
-
+                
                 jPanel1.add(boton);
-
+                
                 if (contX == 430) {
                     contX = 10;
                     contY += 40;
                 } else {
                     contX += 30;
                 }
-
+                
                 cont++;
-
+                
             }
-
+            
         }
-
+        
         jPanel1.repaint();
         repaint();
-
-    }
-
-    public void actualizarAsiento(int x, int y, int valor) {
-
-        admin.getPeliculas().get(admin.getPeli()).getSalas().get(admin.getSala()).getListaHorarios().get(admin.getTanda()).getAsientos();
-
+        
     }
 
     /**
@@ -186,7 +180,8 @@ public class Asientos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
+        
+        admin.getPeliculas().get(admin.getPeli()).getSalas().get(admin.getSala()).getListaHorarios().get(admin.getTanda()).setAsientos(asientos);
         VentanaFactura ventanafactura = new VentanaFactura(admin);
         this.setVisible(false);
         ventanafactura.setVisible(true);

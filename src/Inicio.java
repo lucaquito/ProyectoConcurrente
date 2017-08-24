@@ -1,6 +1,8 @@
 
 import java.io.IOException;
 import java.net.ConnectException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /*
@@ -13,7 +15,7 @@ import javax.swing.JOptionPane;
  * @author luis
  */
 public class Inicio extends javax.swing.JFrame {
-
+    
     private Admin admin;
 
     /**
@@ -30,51 +32,53 @@ public class Inicio extends javax.swing.JFrame {
         admin.agregarPelicula("Cars 3", "", "176 Min", 1, "Peliculas/cars-3.jpg");
         admin.agregarPelicula("Emoji", "", "136 Min", 1, "Peliculas/emoji.jpeg");
         admin.agregarPelicula("Mi vilano Favorito 3", "", "126 Min", 1, "Peliculas/mi.jpg");
-
+        
         Sala2D sala2D = new Sala2D("Sala 2D");
         Sala3D sala3D = new Sala3D("Sala 3D");
         SalaVIP salavip = new SalaVIP("Sala VIP");
-
+        
         admin.agregarSalaPelicula(sala2D, "Spider-Man");
         admin.agregarSalaPelicula(sala3D, "Spider-Man");
         admin.agregarSalaPelicula(salavip, "Spider-Man");
-
+        
         admin.agregarSalaPelicula(sala2D, "Planeta de los Simios");
         admin.agregarSalaPelicula(sala3D, "Planeta de los Simios");
         admin.agregarSalaPelicula(salavip, "Planeta de los Simios");
-
+        
         admin.agregarSalaPelicula(sala2D, "Anabelle 2");
         admin.agregarSalaPelicula(sala3D, "Anabelle 2");
         admin.agregarSalaPelicula(salavip, "Anabelle 2");
-
+        
         admin.agregarSalaPelicula(sala2D, "Cars 3");
         admin.agregarSalaPelicula(sala3D, "Cars 3");
-
+        
         admin.agregarSalaPelicula(sala2D, "Emoji");
-
+        
         admin.agregarSalaPelicula(sala2D, "Mi vilano Favorito 3");
         admin.agregarSalaPelicula(sala3D, "Mi vilano Favorito 3");
-
+        
     }
-
-    private void Conectar() {
-
+    
+    private void Conectar() throws IOException {
+        
         String nombre = txtNombre.getText();
         int puerto = Integer.parseInt(txtPuerto.getText());
-
+        
         Client cliente = new Client(nombre, puerto);
         admin = cliente.recibirAdmin();
+        System.out.println("Se recibio admin");
         
-        if(admin==null){
-        JOptionPane.showMessageDialog(this, "Ocurrió un error");
-        }else{
-        VentanaPrincipal ventanaprincipal = new VentanaPrincipal(admin);
-        this.setVisible(false);
-        ventanaprincipal.setVisible(true);
-        
-        
+        if (admin == null) {
+            JOptionPane.showMessageDialog(this, "Ocurrió un error");
+        } else {
+            admin.setServer(nombre);
+            admin.setPuerto(puerto);
+            VentanaPrincipal ventanaprincipal = new VentanaPrincipal(admin);
+            this.setVisible(false);
+            ventanaprincipal.setVisible(true);
+            
         }
-
+        
     }
 
     /**
@@ -140,13 +144,17 @@ public class Inicio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
-        Conectar();
+        
+        try {
+            Conectar();
+        } catch (IOException ex) {
+            Logger.getLogger(Inicio.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-
+        
         VentanaPrincipal ventanaprincipal = new VentanaPrincipal(admin);
         this.setVisible(false);
         ventanaprincipal.setVisible(true);

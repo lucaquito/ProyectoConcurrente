@@ -10,6 +10,7 @@ public class Servidor {
 
         while (true) {
             servidor.communicate();
+            servidor.recibir();
         }
 
     }
