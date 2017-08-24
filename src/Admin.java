@@ -33,7 +33,7 @@ public class Admin implements Serializable {
         this.peli=0;
         this.sala=0;
         this.tanda=0;
-        this.asientosSeleccionados.removeAll(peliculas);
+        this.asientosSeleccionados= new LinkedList<>();
         
     }
 

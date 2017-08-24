@@ -30,8 +30,6 @@ public class Asientos extends javax.swing.JFrame {
         this.cantidadAsientos = admin.obtenerEntradasTotales();
         this.asientos = admin.getPeliculas().get(admin.getPeli()).getSalas().get(admin.getSala()).getListaHorarios().get(admin.getTanda()).getAsientos();
         this.setSize(633, 430);
-        this.asientos[0][0] = 1;
-        this.asientos[0][1] = 1;
         //JOptionPane.showMessageDialog(null, asientos.length);
         this.setResizable(false);
         generarAsientos();

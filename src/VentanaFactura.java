@@ -49,7 +49,7 @@ public class VentanaFactura extends javax.swing.JFrame {
 
         cliente.enviarAdmin(admin);
 
-        JOptionPane.showMessageDialog(null, "Se envio el admin");
+//        JOptionPane.showMessageDialog(null, "Se envio el admin");
 
     }
 
@@ -75,7 +75,6 @@ public class VentanaFactura extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         lbFecha = new javax.swing.JLabel();
         lbHora = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
@@ -101,16 +100,7 @@ public class VentanaFactura extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(605, 30, 60, 27);
-
-        jButton2.setText("jButton2");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton2);
-        jButton2.setBounds(520, 30, 57, 27);
+        jButton1.setBounds(605, 30, 60, 23);
 
         lbFecha.setText("jLabel6");
         getContentPane().add(lbFecha);
@@ -188,11 +178,6 @@ public class VentanaFactura extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-
-
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -224,7 +209,6 @@ public class VentanaFactura extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
