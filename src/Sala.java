@@ -7,6 +7,9 @@ public class Sala implements Serializable{
 
     private String nombreSala;
     private List<Tanda> listaHorarios;
+    private Double precioAdulto;
+    private Double precioNino;
+    private Double precioAdultoMayor;
 
     public List<Tanda> getListaHorarios() {
         return listaHorarios;
@@ -16,14 +19,28 @@ public class Sala implements Serializable{
         this.listaHorarios = listaHorarios;
     }
 
-    private Double precio;
-
-    public Double getPrecio() {
-        return precio;
+    public Double getPrecioAdulto() {
+        return precioAdulto;
     }
 
-    public void setPrecio(Double precio) {
-        this.precio = precio;
+    public void setPrecioAdulto(Double precioAdulto) {
+        this.precioAdulto = precioAdulto;
+    }
+
+    public Double getPrecioNino() {
+        return precioNino;
+    }
+
+    public void setPrecioNino(Double precioNino) {
+        this.precioNino = precioNino;
+    }
+
+    public Double getPrecioAdultoMayor() {
+        return precioAdultoMayor;
+    }
+
+    public void setPrecioAdultoMayor(Double precioAdultoMayor) {
+        this.precioAdultoMayor = precioAdultoMayor;
     }
 
     public String getNombreSala() {
@@ -32,11 +49,6 @@ public class Sala implements Serializable{
 
     public void setNombreSala(String nombreSala) {
         this.nombreSala = nombreSala;
-    }
-
-    public Sala(String nombreSala, Double precio) {
-        this.nombreSala = nombreSala;
-        this.precio = precio;
     }
 
     public Sala() {

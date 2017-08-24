@@ -29,9 +29,21 @@ public class VentanaFactura extends javax.swing.JFrame {
         
         lbPelicula.setText(peli.getNombre());
         lbHorario.setText(peli.getSalas().get(admin.getSala()).getListaHorarios().get(admin.getTanda()).getNombre());
-        lbEntradas.setText(admin.obtenerEntradasTotales()+"");
+        lbTotal.setText(calcularTotal());
         lbTipoSala.setText(peli.getSalas().get(admin.getSala()).getNombreSala());
         lbButaca.setText(admin.obtenerButacas());
+        
+    }
+    
+    public String calcularTotal(){
+        
+        Double cantidadAdulto = admin.getPeliculas().get(admin.getPeli()).getSalas().get(admin.getSala()).getPrecioAdulto() * admin.getCantAdultos();
+        Double cantidadAdultoMayor = admin.getPeliculas().get(admin.getPeli()).getSalas().get(admin.getSala()).getPrecioAdultoMayor()* admin.getCantAdultoMayor();
+        Double cantidadNino = admin.getPeliculas().get(admin.getPeli()).getSalas().get(admin.getSala()).getPrecioNino()* admin.getCantNinos();
+        
+        Double total = cantidadAdulto+cantidadAdultoMayor+cantidadNino;
+    
+        return total +"";
         
     }
 
@@ -55,7 +67,7 @@ public class VentanaFactura extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         lbPelicula = new javax.swing.JLabel();
         lbHorario = new javax.swing.JLabel();
-        lbEntradas = new javax.swing.JLabel();
+        lbTotal = new javax.swing.JLabel();
         lbTipoSala = new javax.swing.JLabel();
         lbButaca = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
@@ -74,66 +86,66 @@ public class VentanaFactura extends javax.swing.JFrame {
 
         lbFecha.setText("jLabel6");
         getContentPane().add(lbFecha);
-        lbFecha.setBounds(40, 290, 110, 20);
+        lbFecha.setBounds(40, 300, 110, 20);
 
         lbHora.setText("jLabel6");
         getContentPane().add(lbHora);
-        lbHora.setBounds(40, 267, 110, 20);
+        lbHora.setBounds(40, 270, 110, 20);
 
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel11.setText("978967569467458");
         getContentPane().add(jLabel11);
-        jLabel11.setBounds(570, 300, 110, 20);
+        jLabel11.setBounds(560, 300, 110, 20);
 
         jLabel1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel1.setText("Pelicula");
+        jLabel1.setText("Pelicula:");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(190, 130, 70, 22);
+        jLabel1.setBounds(170, 130, 90, 22);
 
         jLabel2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel2.setText("Horario");
+        jLabel2.setText("Horario:");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(190, 180, 70, 22);
+        jLabel2.setBounds(170, 180, 120, 22);
 
         jLabel3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel3.setText("Cantidad de entradas");
+        jLabel3.setText("Total a Pagar:");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(190, 220, 190, 17);
+        jLabel3.setBounds(170, 220, 190, 17);
 
         jLabel4.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel4.setText("Tipo de sala");
+        jLabel4.setText("Tipo de sala:");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(190, 260, 170, 22);
+        jLabel4.setBounds(170, 260, 170, 22);
 
         jLabel5.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel5.setText("Numero de butaca");
+        jLabel5.setText("Numero de butaca:");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(190, 300, 170, 22);
+        jLabel5.setBounds(170, 300, 170, 22);
 
         lbPelicula.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         lbPelicula.setText("jLabel6");
         getContentPane().add(lbPelicula);
-        lbPelicula.setBounds(390, 120, 150, 30);
+        lbPelicula.setBounds(270, 130, 270, 20);
 
         lbHorario.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         lbHorario.setText("jLabel7");
         getContentPane().add(lbHorario);
-        lbHorario.setBounds(390, 180, 150, 22);
+        lbHorario.setBounds(370, 180, 170, 22);
 
-        lbEntradas.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        lbEntradas.setText("jLabel8");
-        getContentPane().add(lbEntradas);
-        lbEntradas.setBounds(390, 220, 150, 20);
+        lbTotal.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lbTotal.setText("jLabel8");
+        getContentPane().add(lbTotal);
+        lbTotal.setBounds(370, 220, 170, 20);
 
         lbTipoSala.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         lbTipoSala.setText("jLabel9");
         getContentPane().add(lbTipoSala);
-        lbTipoSala.setBounds(390, 260, 150, 22);
+        lbTipoSala.setBounds(370, 260, 170, 22);
 
         lbButaca.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         lbButaca.setText("jLabel10");
         getContentPane().add(lbButaca);
-        lbButaca.setBounds(390, 300, 150, 22);
+        lbButaca.setBounds(370, 300, 170, 22);
 
         jLabel12.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Otras/82a3255f-dc5a-4dd6-8ea1-eb4380ffa54f.jpg"))); // NOI18N
@@ -187,11 +199,11 @@ public class VentanaFactura extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel lbButaca;
-    private javax.swing.JLabel lbEntradas;
     private javax.swing.JLabel lbFecha;
     private javax.swing.JLabel lbHora;
     private javax.swing.JLabel lbHorario;
     private javax.swing.JLabel lbPelicula;
     private javax.swing.JLabel lbTipoSala;
+    private javax.swing.JLabel lbTotal;
     // End of variables declaration//GEN-END:variables
 }

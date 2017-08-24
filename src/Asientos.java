@@ -13,6 +13,16 @@ public class Asientos extends javax.swing.JFrame {
     private int cantidadAsientos;
     private int contAsientosEscogidos;
     private int[][] asientos;
+    private int contI;
+    private int contJ;
+
+    public int[][] getAsientos() {
+        return asientos;
+    }
+
+    public void setAsientos(int[][] asientos) {
+        this.asientos = asientos;
+    }
 
     public Asientos(Admin admin) {
         initComponents();
@@ -25,54 +35,81 @@ public class Asientos extends javax.swing.JFrame {
         //JOptionPane.showMessageDialog(null, asientos.length);
         this.setResizable(false);
         generarAsientos();
+        jButton1.setEnabled(false);
     }
 
     public void generarAsientos() {
 
         int contX = 10;
         int contY = 10;
-        int cont=1;
+        int cont = 1;
         contAsientosEscogidos = 0;
-        JButton b = new JButton("");
+        JButton boton = new JButton("");
 
         for (int i = 0; i < asientos.length; i++) {
 
             for (int j = 0; j < asientos[i].length; j++) {
 
+                contI = i;
+                contJ = j;
+
                 if (asientos[i][j] == 0) {
 
-                    b = new JButton("");
-                    b.setLocation(contX, contY);
-                    b.setSize(30, 30);
-                    b.setName(cont+"");
-                    b.setIcon(new ImageIcon(getClass().getResource("Otras/asientoicono.jpg")));
+                    boton = new JButton("");
+                    boton.setLocation(contX, contY);
+                    boton.setSize(30, 30);
+                    boton.setName(cont + "");
+                    boton.setIcon(new ImageIcon(getClass().getResource("Otras/asientoicono.jpg")));
 
-                    b.addActionListener(new java.awt.event.ActionListener() {
+                    boton.addActionListener(new java.awt.event.ActionListener() {
+                        private boolean seleccionado = false;
+
                         public void actionPerformed(java.awt.event.ActionEvent e) {
 
-                            if (contAsientosEscogidos < cantidadAsientos) {
-                                JButton boton = (JButton) e.getSource();
-                                boton.setIcon(new ImageIcon(getClass().getResource("Otras/asientoiconorojo.jpg")));
-                                //asientos[i][j] = 1;
-                               //String nombre = b.getName();
-                               //admin.getAsientosSeleccionados().add(b.getName());
-                                contAsientosEscogidos++;
+                            JButton boton = (JButton) e.getSource();
+                            // Cuando se le da click y desactiva el boton
+                            if (seleccionado == true) {
+                                System.out.println("Se desactivo el boton: "+boton.getName());
+                                boton.setIcon(new ImageIcon(getClass().getResource("Otras/asientoicono.jpg")));
+                                seleccionado = false;
+                                contAsientosEscogidos--;
+                                asientos[contI][contJ] = 0;
+                                admin.getAsientosSeleccionados().remove(boton.getName());
+                                // Cuando se activa el boton
                             } else {
-                                JOptionPane.showMessageDialog(null, "No puede comprar mas asientos de los escogidos");
+                                seleccionado = true;
+                                System.out.println("Se activo el boton: "+boton.getName());
+                                if (contAsientosEscogidos < cantidadAsientos) {
+
+                                    boton.setIcon(new ImageIcon(getClass().getResource("Otras/asientoiconorojo.jpg")));
+
+                                    asientos[contI][contJ] = 1;
+
+                                    admin.getAsientosSeleccionados().add(boton.getName());
+                                    contAsientosEscogidos++;
+                                } else {
+                                    JOptionPane.showMessageDialog(null, "No puede comprar mas asientos de los escogidos");
+                                }
+                            }
+
+                            if (contAsientosEscogidos == cantidadAsientos) {
+                                jButton1.setEnabled(true);
+                            }else{
+                                jButton1.setEnabled(false);
                             }
                         }
                     });
 
                 } else if (asientos[i][j] == 1) {
-                    b = new JButton("");
-                    b.setLocation(contX, contY);
-                    b.setSize(30, 30);
-                    b.setIcon(new ImageIcon(getClass().getResource("Otras/asientoiconorojo.jpg")));
-                    b.setName(cont+"");
+                    boton = new JButton("");
+                    boton.setLocation(contX, contY);
+                    boton.setSize(30, 30);
+                    boton.setIcon(new ImageIcon(getClass().getResource("Otras/asientoiconorojo.jpg")));
+                    boton.setName(cont + "");
 
                 }
 
-                jPanel1.add(b);
+                jPanel1.add(boton);
 
                 if (contX == 430) {
                     contX = 10;
@@ -80,7 +117,7 @@ public class Asientos extends javax.swing.JFrame {
                 } else {
                     contX += 30;
                 }
-                
+
                 cont++;
 
             }
@@ -91,11 +128,11 @@ public class Asientos extends javax.swing.JFrame {
         repaint();
 
     }
-    
-    public void actualizaAsientos(){
-    
+
+    public void actualizarAsiento(int x, int y, int valor) {
+
         admin.getPeliculas().get(admin.getPeli()).getSalas().get(admin.getSala()).getListaHorarios().get(admin.getTanda()).getAsientos();
-    
+
     }
 
     /**

@@ -25,7 +25,9 @@ public class SalaVIP extends Sala implements Serializable{
     
     public SalaVIP(String nombre) {
         this.setNombreSala(nombre);
-        this.setPrecio(4600.0);
+        this.setPrecioAdulto(5000.0);
+        this.setPrecioAdultoMayor(4500.0);
+        this.setPrecioNino(4000.0);
         
     }
     

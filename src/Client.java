@@ -1,8 +1,11 @@
 
+import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.ConnectException;
+import java.net.ServerSocket;
 import java.net.Socket;
+import java.net.SocketException;
 import javax.swing.JOptionPane;
 
 public class Client {
@@ -13,6 +16,7 @@ public class Client {
     private boolean isConnected = false;
     private final String nombreServidor;
     private final int puerto;
+    private ServerSocket serverSocket = null;
 
     public Client(String nombreServidor, int puerto) {
         this.nombreServidor = nombreServidor;
@@ -49,6 +53,28 @@ public class Client {
         
         return null;
 
+    }
+    
+    public void enviarAdmin(Admin admin){
+        
+        try {
+            serverSocket = new ServerSocket(4445);
+            socket = serverSocket.accept();
+            System.out.println("Conectado");
+
+            outputStream = new ObjectOutputStream(socket.getOutputStream());
+            
+            System.out.println("Enviando administrador");
+            outputStream.writeObject(admin);
+            socket.close();
+            serverSocket.close();
+
+        } catch (SocketException se) {
+            System.err.println("Error de socket");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    
     }
 
 }

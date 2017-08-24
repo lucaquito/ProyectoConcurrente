@@ -17,13 +17,13 @@ public class Admin implements Serializable {
     private int peli;
     private int sala;
     private int tanda;
-    private List<Integer> asientosSeleccionados;
+    private List<String> asientosSeleccionados;
 
-    public List<Integer> getAsientosSeleccionados() {
+    public List<String> getAsientosSeleccionados() {
         return asientosSeleccionados;
     }
 
-    public void setAsientosSeleccionados(List<Integer> asientosSeleccionados) {
+    public void setAsientosSeleccionados(List<String> asientosSeleccionados) {
         this.asientosSeleccionados = asientosSeleccionados;
     }
 
@@ -89,14 +89,14 @@ public class Admin implements Serializable {
         this.peli = 0;
         this.sala = 0;
         this.tanda = 0;
-        this.asientosSeleccionados = new LinkedList<Integer>();
+        this.asientosSeleccionados = new LinkedList<String>();
 
     }
     
     public String obtenerButacas(){
     
         String salida = "";
-        for (int asiento : asientosSeleccionados) {
+        for (String asiento : asientosSeleccionados) {
             salida += asiento +"/";
         }
         
